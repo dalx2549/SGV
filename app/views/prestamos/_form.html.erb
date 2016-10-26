@@ -1,0 +1,46 @@
+<%= bootstrap_form_for(prestamo) do |f| %>
+  <% if prestamo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prestamo.errors.count, "error") %> prohibited this prestamo from being saved:</h2>
+
+      <ul>
+      <% prestamo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.date_select :fechaEntrega %>
+  </div>
+
+  <div class="field">
+    <%= f.date_select :fechaDevolucion %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :razon %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :observaciones %>
+  </div>
+
+  <div class="field">
+
+    <%= f.select :persona_cedula,
+                 Persona.all.map { |u| [u.nombres, u.id] },
+                 { include_blank: true},
+                 { class: 'chosen-select'}
+    %>
+  </div>
+
+  <div class="field">
+    <%= f.number_field :vehiculo_placa %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

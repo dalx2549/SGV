@@ -1,0 +1,41 @@
+<%= bootstrap_form_for(persona) do |f| %>
+  <% if persona.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(persona.errors.count, "error") %> prohibited this persona from being saved:</h2>
+
+      <ul>
+      <% persona.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :cedula, placeholder:"Ej. 1100000000" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :nombres %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :apellidos %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email , placeholder:"example@example.com"%>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :departamento %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :cargo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

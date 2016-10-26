@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechaEntrega: 2016-10-20
+  fechaDevolucion: 2016-10-20
+  razon: MyText
+  observaciones: MyText
+  persona_id: 1
+  vehiculo_id: 1
+
+two:
+  fechaEntrega: 2016-10-20
+  fechaDevolucion: 2016-10-20
+  razon: MyText
+  observaciones: MyText
+  persona_id: 1
+  vehiculo_id: 1

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marca: MyString
+  modelo: MyString
+  color: MyString
+  kilometraje: 
+  capacidadPasajeros: 
+  observaciones: MyText
+
+two:
+  marca: MyString
+  modelo: MyString
+  color: MyString
+  kilometraje: 
+  capacidadPasajeros: 
+  observaciones: MyText

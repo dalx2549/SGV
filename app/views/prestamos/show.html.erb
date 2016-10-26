@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fechaentrega:</strong>
+  <%= @prestamo.fechaEntrega %>
+</p>
+
+<p>
+  <strong>Fechadevolucion:</strong>
+  <%= @prestamo.fechaDevolucion %>
+</p>
+
+<p>
+  <strong>Razon:</strong>
+  <%= @prestamo.razon %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @prestamo.observaciones %>
+</p>
+
+<p>
+  <strong>Persona:</strong>
+  <%= @prestamo.persona_cedula %>
+</p>
+
+<p>
+  <strong>Vehiculo:</strong>
+  <%= @prestamo.vehiculo_placa %>
+</p>
+
+<%= link_to 'Edit', edit_prestamo_path(@prestamo) %> |
+<%= link_to 'Back', prestamos_path %>

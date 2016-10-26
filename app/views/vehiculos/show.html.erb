@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Marca:</strong>
+  <%= @vehiculo.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @vehiculo.modelo %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @vehiculo.color %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @vehiculo.tipo %>
+
+</p>
+
+<p>
+  <strong>Kilometraje:</strong>
+  <%= @vehiculo.kilometraje %>
+</p>
+
+<p>
+  <strong>Capacidad de Pasajeros:</strong>
+  <%= @vehiculo.capacidadPasajeros %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @vehiculo.observaciones %>
+</p>
+
+<p><%= image_tag @vehiculo.image.url(:medium) %></p>
+
+<div>
+
+  <%= link_to 'Edit', edit_vehiculo_path(@vehiculo), :class => "btn btn-success" %>
+  <%= link_to 'Back', vehiculos_path, :class => "btn btn-success" %>
+
+</div>

@@ -1,0 +1,56 @@
+
+
+<h1>Vehiculos</h1>
+
+<div>
+  <p id="notice"><%= notice %></p>
+</div>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Color</th>
+      <th>Tipo</th>
+      <th>Kilometraje</th>
+      <th colspan="4">Cap. Pasajeros</th>
+      <th>Observaciones</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehiculos.each do |vehiculo| %>
+      <tr>
+        <td><%= image_tag vehiculo.image.url(:thumb) %></td>
+        <td><%= vehiculo.marca %></td>
+        <td><%= vehiculo.modelo %></td>
+        <td><%= vehiculo.color %></td>
+        <td><%= vehiculo.tipo %></td>
+        <td><%= vehiculo.kilometraje %></td>
+        <td colspan="4"><%= vehiculo.capacidadPasajeros %></td>
+        <td><%= vehiculo.observaciones %></td>
+
+        <td>
+          <div class="row" style="display: inline-block; float: none; white-space: nowrap;">
+
+            <a><%= link_to 'Mostrar', vehiculo, class: "btn btn-default" %></a>
+            <a><%= link_to 'Editar', edit_vehiculo_path(vehiculo), class: "btn btn-default" %></a>
+            <a><%= link_to 'Eliminar', vehiculo, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%></a>
+
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<div class="btn">
+  <%= link_to 'New Vehiculo', new_vehiculo_path, class:"btn btn-default" %>
+</div>
+
