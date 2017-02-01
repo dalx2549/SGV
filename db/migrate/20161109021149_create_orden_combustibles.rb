@@ -19,7 +19,7 @@ class CreateOrdenCombustibles < ActiveRecord::Migration[5.0]
   end
 
 
-  execute "SELECT setval('orden_combustibles_id_seq', 1000)"
+ 
 
 
 
