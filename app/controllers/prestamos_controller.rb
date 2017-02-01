@@ -1,13 +1,27 @@
 class PrestamosController < ApplicationController
-  before_filter :authenticate_user!
+
+
   before_action :set_prestamo, only: [:show, :edit, :update, :destroy]
   #before_filter :find_persona
 
   # GET /prestamos
   # GET /prestamos.json
   def index
-    @prestamos = Prestamo.all
+
+    if admin_signed_in?
+
+      @prestamos = Prestamo.all
+
+    elsif user_signed_in?
+
+      @prestamos = Prestamo.where(user_cedula: current_user.id)
+      @vehiculos = Vehiculo.where(:tipo => params[:tipo])
+
+    end
   end
+
+
+
 
   # GET /prestamos/1
   # GET /prestamos/1.json
@@ -17,6 +31,8 @@ class PrestamosController < ApplicationController
   # GET /prestamos/new
   def new
     @prestamo = Prestamo.new
+
+    @vehiculos = Vehiculo.where(:tipo => params[:tipo])
   end
 
   # GET /prestamos/1/edit
@@ -53,6 +69,19 @@ class PrestamosController < ApplicationController
     end
   end
 
+  def approve
+
+    @prestamo = Prestamo.find(params[:id])
+    @prestamo.update_attributes(approved: true)
+    redirect_to prestamos_url
+
+    # Modifica disponibilidad del vehiculo
+    @vehiculo = Vehiculo.where(placa: @prestamo.vehiculo_placa) #Query para seleccionar el vehiculo del prestamo.
+    @vehiculo.update(disponibilidad: false) #Cambia atributo a false
+
+  end
+
+
   # DELETE /prestamos/1
   # DELETE /prestamos/1.json
   def destroy
@@ -64,21 +93,21 @@ class PrestamosController < ApplicationController
   end
 
   private
-    # Uso de callbacks
-    def set_prestamo
-      @prestamo = Prestamo.find(params[:id])
-    end
+  # Uso de callbacks
+  def set_prestamo
+    @prestamo = Prestamo.find(params[:id])
+  end
 
-    def prestamo_params
-      params.require(:prestamo).permit(:fechaEntrega, :fechaDevolucion, :razon, :observaciones, :persona_cedula, :vehiculo_placa)
-    end
+  def prestamo_params
+    params.require(:prestamo).permit(:fechaEntrega, :fechaDevolucion, :razon, :observaciones, :user_cedula, :vehiculo_placa, :chofer)
+  end
 
   protected
 
-    def find_persona
+  def find_persona
 
-      @persona = Persona.find(params[:id])
+    @persona = Persona.find(params[:id])
 
-    end
+  end
 
 end

@@ -1,0 +1,64 @@
+<%= bootstrap_form_for(factura) do |f| %>
+  <% if factura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(factura.errors.count, "error") %> prohibited this factura from being saved:</h2>
+
+      <ul>
+      <% factura.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= f.text_field :emisor %>
+  </div>
+
+  <div class="field">
+
+    <%= f.text_field :numero, label: "Número", :maxlength => "8", 'data-validation' => 'number' %>
+  </div>
+
+  <div class="field">
+
+    <%= f.select :id_orden_combustible,
+    options_from_collection_for_select(OrdenCombustible.all, "id", "id"), class: "chosen-select", label: "Orden de combustible"
+    %>
+
+  </div>
+
+  <div class="field">
+
+    <%= f.select :id_orden_respuesto,
+                 options_from_collection_for_select(OrdenRepuesto.all, "id", "id"), class: "chosen-select", label: "Orden de repuesto"
+    %>
+
+
+  </div>
+
+  <div class="field">
+
+    <%= f.select :id_orden_mantenimiento,
+                 options_from_collection_for_select(OrdenMantenimiento.all, "id", "id"), class: "chosen-select", label: "Orden de mantenimiento"
+    %>
+  </div>
+
+  <div class="field">
+
+    <%=	 f.file_field :avatar, label: "Imagen" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+
+  $.validate({
+    lang: 'es'
+  });
+
+</script>

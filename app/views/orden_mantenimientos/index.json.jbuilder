@@ -1,0 +1,1 @@
+json.array! @orden_mantenimientos, partial: 'orden_mantenimientos/orden_mantenimiento', as: :orden_mantenimiento

@@ -1,37 +1,72 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<script>
+
+  $(document).ready(function() {
+    $('#tabla-prestamo').DataTable();
+  } );
+
+</script>
+
 <h1>Prestamos</h1>
 
-<table>
+<table  id="tabla-prestamo" class="display"  width="100%">
   <thead>
-    <tr>
-      <th>Fechaentrega</th>
-      <th>Fechadevolucion</th>
-      <th>Razon</th>
-      <th>Observaciones</th>
-      <th>Persona</th>
-      <th>Vehiculo</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Fecha Entrega</th>
+    <th>Fecha Devolucion</th>
+    <th>Razón</th>
+    <th>Observaciones</th>
+    <th>Persona</th>
+    <th>Vehículo</th>
+    <th>Estado</th>
+    <th></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @prestamos.each do |prestamo| %>
+  <% @prestamos.each do |prestamo| %>
       <tr>
         <td><%= prestamo.fechaEntrega %></td>
         <td><%= prestamo.fechaDevolucion %></td>
         <td><%= prestamo.razon %></td>
         <td><%= prestamo.observaciones %></td>
-        <td><%= prestamo.persona_cedula %></td>
+        <td><%= prestamo.user_cedula %></td>
         <td><%= prestamo.vehiculo_placa %></td>
-        <td><%= link_to 'Show', prestamo %></td>
-        <td><%= link_to 'Edit', edit_prestamo_path(prestamo) %></td>
-        <td><%= link_to 'Destroy', prestamo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% if !prestamo.approved %>
+            <td>Por aprobar</td>
+        <% elsif prestamo.approved %>
+            <td>Aprobado</td>
+        <% end %>
+
+        <td>
+        <%= link_to 'Mostrar', prestamo, class: "btn btn-default" %>
+
+        <% if admin_signed_in? %>
+
+            <%= link_to 'Editar', edit_prestamo_path(prestamo) %>
+            <%= link_to 'Eliminar', prestamo, method: :delete, data: {confirm: 'Estás seguro?'} %>
+            <%= link_to 'Aprobar', prestamo, method: :post, data: {confirm: 'Estás seguro?'} %>
+
+
+        <% end %>
+        </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
+<% if user_signed_in? %>
+
 <%= link_to 'New Prestamo', new_prestamo_path %>
+
+<%	 end %>
+
+
+
+

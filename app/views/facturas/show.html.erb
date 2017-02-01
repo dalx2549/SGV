@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Emisor:</strong>
+  <%= @factura.emisor %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @factura.numero %>
+</p>
+
+<p>
+  <strong>Id orden combustible:</strong>
+  <%= @factura.id_orden_combustible %>
+</p>
+
+<p>
+  <strong>Id orden respuesto:</strong>
+  <%= @factura.id_orden_respuesto %>
+</p>
+
+<p>
+  <strong>Id orden mantenimiento:</strong>
+  <%= @factura.id_orden_mantenimiento %>
+</p>
+
+<%= link_to 'Edit', edit_factura_path(@factura) %> |
+<%= link_to 'Back', facturas_path %>

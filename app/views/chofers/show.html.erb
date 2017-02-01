@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @chofer.nombres %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @chofer.apellidos %>
+</p>
+
+<p>
+  <strong>Fechanacimiento:</strong>
+  <%= @chofer.fechaNacimiento %>
+</p>
+
+<p>
+  <strong>Tipolicencia:</strong>
+  <%= @chofer.tipoLicencia %>
+</p>
+
+<p>
+  <strong>Experiencia:</strong>
+  <%= @chofer.experiencia %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%=	image_tag @chofer.avatar %>
+
+</p>
+
+<p>
+
+  <strong>Licencia:</strong>
+  <%	 @chofer.licencias.each do |j| %>
+
+  <%=	 image_tag(j) %>
+
+  <%	 end %>
+
+</p>
+
+<%= link_to 'Edit', edit_chofer_path(@chofer) %> |
+<%= link_to 'Back', chofers_path %>

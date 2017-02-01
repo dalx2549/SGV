@@ -1,46 +1,61 @@
 <%= bootstrap_form_for(prestamo) do |f| %>
-  <% if prestamo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(prestamo.errors.count, "error") %> prohibited this prestamo from being saved:</h2>
+    <% if prestamo.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(prestamo.errors.count, "error") %> prohibited this prestamo from being saved:</h2>
 
-      <ul>
-      <% prestamo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% prestamo.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.date_select :fechaEntrega, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.date_select :fechaEntrega %>
-  </div>
+    <div class="field">
+      <%= f.date_select :fechaDevolucion, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
+    </div>
 
-  <div class="field">
-    <%= f.date_select :fechaDevolucion %>
-  </div>
+    <div class="field">
+      <%= f.text_area :razon %>
+    </div>
 
-  <div class="field">
-    <%= f.text_area :razon %>
-  </div>
+    <div class="field">
+      <%= f.text_area :observaciones %>
+    </div>
 
-  <div class="field">
-    <%= f.text_area :observaciones %>
-  </div>
+    <div class="field">
 
-  <div class="field">
+      <%= f.select :vehiculo_placa,
+                   options_from_collection_for_select(Vehiculo.all, "id", "id"), class: "chosen-select"
+      %>
 
-    <%= f.select :persona_cedula,
-                 Persona.all.map { |u| [u.nombres, u.id] },
-                 { include_blank: true},
-                 { class: 'chosen-select'}
-    %>
-  </div>
+    </div>
 
-  <div class="field">
-    <%= f.number_field :vehiculo_placa %>
-  </div>
+    <div class="field">
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <%=	 f.check_box :chofer, label: "¿Desea conductor?" %>
+
+    </div>
+
+    <div class="field">
+      <%= f.text_field :user_cedula, :value => current_user.id, label: current_user.name + current_user.last_name %>
+
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
+
+
+<script>
+
+  $.validate({
+    lang: 'es'
+  });
+
+</script>

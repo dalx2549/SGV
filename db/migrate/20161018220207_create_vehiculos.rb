@@ -6,14 +6,17 @@ class CreateVehiculos < ActiveRecord::Migration[5.0]
       t.string :modelo
       t.string :color
       t.string :tipo
+      t.integer :anio
       t.integer :kilometraje
       t.integer :capacidadPasajeros
+      t.decimal :capacidadCarga
       t.text :observaciones
+      t.boolean :disponibilidad, :default => true, :null => false
+
 
       t.timestamps
     end
 
-    add_attachment :vehiculos, :image
 
   end
 end

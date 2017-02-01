@@ -1,0 +1,14 @@
+<div class="alert alert-warning" role="alert">
+
+  <%	 @prestamos = Prestamo.all %>
+  <strong>Tienes: &nbsp;</strong><%=	 @prestamos.where(:approved => false).count %><strong> &nbsp; prestamos por aprobar </strong>
+
+</div>
+
+<div class="alert alert-warning" role="alert">
+
+  <%	 @users = User.all %>
+  <strong>Tienes: &nbsp;</strong><%= @users.where(:approved => false).count %><strong> &nbsp; usuarios por aprobar </strong>
+
+</div>
+

@@ -1,0 +1,26 @@
+<h1>New Orden Combustible</h1>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-xs-6">
+
+      <%= render 'form', orden_combustible: @orden_combustible %>
+
+    </div>
+    <div class="col-xs-4">
+
+      <%=	 render partial: 'orden_combustibles/history', object: @orden_combustibles %>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<%= link_to 'Back', orden_combustibles_path %>

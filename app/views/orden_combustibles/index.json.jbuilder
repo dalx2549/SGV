@@ -1,0 +1,1 @@
+json.array! @orden_combustibles, partial: 'orden_combustibles/orden_combustible', as: :orden_combustible

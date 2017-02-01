@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_orden: 1
+  estacionServicio: MyString
+  vehiculo_placa: MyString
+  tipoCombustible: MyString
+  valorCompra: 9.99
+  persona: MyString
+  cedula: 1
+  cargo: MyString
+
+two:
+  id_orden: 1
+  estacionServicio: MyString
+  vehiculo_placa: MyString
+  tipoCombustible: MyString
+  valorCompra: 9.99
+  persona: MyString
+  cedula: 1
+  cargo: MyString

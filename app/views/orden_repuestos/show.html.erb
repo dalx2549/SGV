@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @orden_repuesto.fecha %>
+</p>
+
+<p>
+  <strong>Encargado:</strong>
+  <%= @orden_repuesto.encargado %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @orden_repuesto.proveedor %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @orden_repuesto.observaciones %>
+</p>
+
+<p>
+  <strong>Vehiculo placa:</strong>
+  <%= @orden_repuesto.vehiculo_placa %>
+</p>
+
+<%= link_to 'Edit', edit_orden_repuesto_path(@orden_repuesto) %> |
+<%= link_to 'Back', orden_repuestos_path %>

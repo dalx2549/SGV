@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehiculo placa:</strong>
+  <%= @orden_mantenimiento.vehiculo_placa %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @orden_mantenimiento.tipo %>
+</p>
+
+<p>
+  <strong>Kilometraje:</strong>
+  <%= @orden_mantenimiento.kilometraje %>
+</p>
+
+<%= link_to 'Edit', edit_orden_mantenimiento_path(@orden_mantenimiento) %> |
+<%= link_to 'Back', orden_mantenimientos_path %>

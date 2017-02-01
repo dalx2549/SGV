@@ -5,8 +5,8 @@ class CreatePrestamos < ActiveRecord::Migration[5.0]
       t.date :fechaDevolucion
       t.text :razon
       t.text :observaciones
-      t.integer :persona_cedula
-      t.integer :vehiculo_placa
+      t.integer :user_cedula
+      t.string :vehiculo_placa
 
       t.timestamps
     end

@@ -1,0 +1,50 @@
+<h1>Lista de Usuarios: </h1>
+<% @users = User.all %>
+
+<table class="table table-responsive">
+
+  <thead>
+  <tr>
+
+    <th>Cédula</th>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Email</th>
+    <th>Teléfono</th>
+    <th>Cargo</th>
+    <th>Departamento</th>
+    <th>Estado</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+
+
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.cedula %></br></td>
+        <td><%= user.name %><br/></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.telephone %></td>
+        <td><%= user.charge %></td>
+        <td><%= user.department %></td>
+
+        <% if user.approved == false %>
+            <td>Por aprobar</td>
+        <% elsif user.approved == true %>
+            <td>Aprobado</td>
+        <% end %>
+
+        <td><%= link_to 'Show', user, class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+        <td><%= link_to 'Approve', user, method: :post, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+      </tr>
+  <% end %>
+
+  </tbody>
+
+</table>
+
+<br>

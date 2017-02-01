@@ -1,0 +1,1 @@
+json.partial! "orden_repuestos/orden_repuesto", orden_repuesto: @orden_repuesto

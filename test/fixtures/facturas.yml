@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emisor: MyString
+  numero: 1
+  id_orden_combustible: 1
+  id_orden_respuesto: 1
+  id_orden_mantenimiento: 1
+
+two:
+  emisor: MyString
+  numero: 1
+  id_orden_combustible: 1
+  id_orden_respuesto: 1
+  id_orden_mantenimiento: 1

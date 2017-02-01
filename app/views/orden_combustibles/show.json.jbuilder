@@ -1,0 +1,1 @@
+json.partial! "orden_combustibles/orden_combustible", orden_combustible: @orden_combustible

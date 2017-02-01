@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vehiculo_placa: MyString
+  tipo: MyString
+  kilometraje: 
+
+two:
+  vehiculo_placa: MyString
+  tipo: MyString
+  kilometraje: 

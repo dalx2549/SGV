@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orden Combustibles</h1>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Id orden</th>
+      <th>Estacionservicio</th>
+      <th>Vehiculo placa</th>
+      <th>Tipocombustible</th>
+      <th>Valorcompra</th>
+      <th>Persona</th>
+      <th>Cedula</th>
+      <th>Cargo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orden_combustibles.each do |orden_combustible| %>
+      <tr>
+
+        <td><%= orden_combustible.estacionServicio %></td>
+        <td><%= orden_combustible.vehiculo_placa %></td>
+        <td><%= orden_combustible.tipoCombustible %></td>
+        <td><%= orden_combustible.valorCompra %></td>
+        <td><%= orden_combustible.persona %></td>
+        <td><%= orden_combustible.cedula %></td>
+        <td><%= orden_combustible.cargo %></td>
+        <td><%= link_to 'Show', orden_combustible %></td>
+        <td><%= link_to 'Edit', edit_orden_combustible_path(orden_combustible) %></td>
+        <td><%= link_to 'Destroy', orden_combustible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orden Combustible', new_orden_combustible_path %>

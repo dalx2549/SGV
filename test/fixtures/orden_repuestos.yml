@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2016-12-18
+  encargado: 
+  proveedor: MyString
+  observaciones: MyText
+  vehiculo_placa: MyString
+
+two:
+  fecha: 2016-12-18
+  encargado: 
+  proveedor: MyString
+  observaciones: MyText
+  vehiculo_placa: MyString

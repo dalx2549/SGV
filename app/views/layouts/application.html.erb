@@ -1,95 +1,169 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SGV</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <header>
+<head>
+  <title>SGV</title>
+  <%= csrf_meta_tags %>
 
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Gestión Vehicular</a>
-        </div>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Prestamos<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Vehiculos</a> </li>
-            <li><a href="#">Personas</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Órdenes <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Combustible</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Mantenimiento</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Reparación</a></li>
-              </ul>
-            </li>
-          </ul>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
-          <ul class="nav navbar-nav navbar-right">
-            <p class="navbar-text">
-              <% if user_signed_in? %>
-                  Conectado como <mark><strong><%= current_user.email %>.</strong></mark> No eres t&uacute;?
-                  <%= link_to "Log off", destroy_user_session_path, :method => :delete%>
-              <% else %>
-                  <%= link_to "Sign Up", new_user_registration_path %> o
-                  <%= link_to "Login", new_user_session_path %>
-              <% end %>
-            </p>
-          </ul>
-        </div>
+</head>
+
+<header>
+
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><strong>Gestión Vehicular</strong> </a>
       </div>
-    </nav>
 
-  </header>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
 
-  <body>
+          <% if user_signed_in? %>
 
-    <div id="main-container" class="container-fluid">
-      <div class="row">
+              <li> <%= link_to 'Prestamos', prestamos_path %> </li>
 
-        <div class="col-lg-2">
+          <% end %>
 
-        </div>
-        <div class="col-lg-6">
+          <% if admin_signed_in? %>
 
-              <% if user_signed_in? %>
+              <li> <%= link_to 'Prestamos', prestamos_path %> </li>
+              <li> <%= link_to 'Vehículos', vehiculos_path %> </li>
+              <li> <%= link_to 'Choferes', chofers_path %> </li>
+
+          <% end %>
+
+          <% if admin_signed_in? %>
+
+              <li><%= link_to 'Usuarios', users_path %></li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Órdenes
+                  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li> <%= link_to 'Combustible', orden_combustibles_path %> </li>
+                  <li role="separator" class="divider"></li>
+                  <li> <%= link_to 'Mantenimiento', orden_mantenimientos_path %> </li>
+                  <li role="separator" class="divider"></li>
+                  <li> <%= link_to 'Repuestos', orden_repuestos_path %> </li>
+                  <li role="separator" class="divider"></li>
+                  <li> <%= link_to 'Ingresar Facturas', facturas_path %> </li>
+                </ul>
+              </li>
+
+          <% end %>
+
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <p class="navbar-text">
+
+
+            <% if admin_signed_in? %>
+                Conectado como
+                <mark><%= current_admin.email %></mark>
+                ¿No eres t&uacute;? &nbsp;
+                <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "logof" %>
+            <% else
+                 if user_signed_in? %>
+                    Conectado como
+                    <mark><%= current_user.email %></mark>
+                    No eres t&uacute;? &nbsp;
+                    <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "logof" %>
+
+                <% end %>
+
+            <% end %>
+          </p>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<body>
+
+<div id="main-container" class="container">
+  <div class="row">
+
+    <%	 if user_signed_in? or admin_signed_in? %>
+
+        <div class="col-md-8">
+
+          <% if user_signed_in? %>
               <% flash.each do |key, value| %>
                   <div class="alert alert-success alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <%= value %>
                   </div>
               <% end %>
-              <%else %>
+          <% else %>
               <% flash.each do |key, value| %>
                   <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <%= value %>
                   </div>
               <% end %>
-              <%end%>
+          <% end %>
 
 
           <%= yield %>
 
-        </div>
-      </div>
+  <%	 else %>
+
+        <div class="col-md-6 col-md-offset-3">
+
+          <% if user_signed_in? %>
+              <% flash.each do |key, value| %>
+                  <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <%= value %>
+                  </div>
+              <% end %>
+          <% else %>
+              <% flash.each do |key, value| %>
+                  <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <%= value %>
+                  </div>
+              <% end %>
+          <% end %>
+
+
+          <%= yield %>
+
+
+    <%	 end %>
+
+
+
+
     </div>
 
-  </body>
+
+
+
+
+
+  </div>
+</div>
+
+</body>
 </html>

@@ -1,0 +1,2 @@
+json.extract! orden_combustible, :id, :id_orden, :estacionServicio, :vehiculo_placa, :tipoCombustible, :valorCompra, :persona, :cedula, :cargo, :created_at, :updated_at
+json.url orden_combustible_url(orden_combustible, format: :json)

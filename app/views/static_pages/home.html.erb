@@ -1,10 +1,83 @@
-<div class="jumbotron">
+<% if admin_signed_in? %>
 
-  <h1>UTPL</h1>
-  <p>Sistema de Gestión Vehicular</p>
+    <div class="jumbotron">
 
-  <div class="btn">
-    <%= link_to 'Login', new_user_session_path, class:"btn btn-default" %>
-  </div>
+      <div class="row">
 
-</div>
+        <div class="col-md-8">
+
+          <h3>Bienvenido Administrador</h3>
+          <h4>&nbsp;</h4>
+          <h4>Tareas pendientes: </h4>
+          <%= render :partial => 'notificaciones/notificaciones.html.erb' %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+<% else %>
+
+    <div class="jumbotron">
+
+      <div class="row">
+
+        <div class="col-md-8">
+
+          <h1>UTPL</h1>
+          <p>Sistema de Gestión Vehicular</p>
+
+
+
+          <% if admin_signed_in? %>
+
+              <div class="btn">
+
+              </div>
+
+
+          <% elsif user_signed_in? %>
+
+              <div class="btn">
+
+              </div>
+
+          <% else %>
+
+              <div class="btn">
+
+                <%= link_to raw('<span class="glyphicon glyphicon-user" aria-hidden="true"></span>Usuario'), new_user_session_path, class: "btn btn-primary" %>
+
+
+              </div>
+
+              <div class="btn">
+                <%= link_to 'Admin', new_admin_session_path, class: "btn btn-primary" %>
+              </div>
+
+
+          <% end %>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Universidad_Técnica_Particular_de_Loja.png/200px-Universidad_Técnica_Particular_de_Loja.png" class="logo">
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+<% end %>
+
+
+
+
+
+
+
+

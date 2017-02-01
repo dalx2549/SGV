@@ -1,0 +1,68 @@
+<%= bootstrap_form_for(orden_repuesto) do |f| %>
+  <% if orden_repuesto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orden_repuesto.errors.count, "error") %> prohibited this orden_repuesto from being saved:</h2>
+
+      <ul>
+      <% orden_repuesto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+
+      <%= f.select :vehiculo_placa,
+                   Vehiculo.all.map { |u| [u.placa] },
+                   { include_blank: true},
+                   { class: 'chosen-select'}
+      %>
+    </div>
+
+  <div class="field">
+
+    <%= f.date_select :fecha, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
+  </div>
+
+  <div class="field">
+
+    <%= f.text_field :encargado, 'data-validation' => 'alphanumeric' %>
+  </div>
+
+  <div class="field">
+
+    <%= f.text_field :proveedor %>
+  </div>
+
+  <div class="field">
+
+    <%= f.text_area :detalle %>
+
+  </div>
+
+  <div class="field">
+
+    <%= f.text_area :observaciones %>
+  </div>
+
+  <div class="field">
+
+    <%=	 f.file_field :avatar, label: "Foto(Opcional)" %>
+
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+
+  $.validate({
+    lang: 'es'
+  });
+
+</script>
+

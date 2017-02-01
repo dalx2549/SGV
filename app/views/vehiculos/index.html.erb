@@ -9,7 +9,8 @@
 <table class="table table-responsive">
   <thead>
     <tr>
-      <th>Image</th>
+
+      <th>Placa</th>
       <th>Marca</th>
       <th>Modelo</th>
       <th>Color</th>
@@ -24,7 +25,8 @@
   <tbody>
     <% @vehiculos.each do |vehiculo| %>
       <tr>
-        <td><%= image_tag vehiculo.image.url(:thumb) %></td>
+
+        <td><%= vehiculo.placa %></td>
         <td><%= vehiculo.marca %></td>
         <td><%= vehiculo.modelo %></td>
         <td><%= vehiculo.color %></td>
@@ -39,7 +41,7 @@
             <a><%= link_to 'Mostrar', vehiculo, class: "btn btn-default" %></a>
             <a><%= link_to 'Editar', edit_vehiculo_path(vehiculo), class: "btn btn-default" %></a>
             <a><%= link_to 'Eliminar', vehiculo, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%></a>
-
+            <a><%=	link_to 'Devolver',vehiculo, method: :post, data:{confirm: 'Estás seguro?'}  %></a>
           </div>
         </td>
       </tr>

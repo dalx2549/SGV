@@ -1,5 +1,5 @@
 class VehiculosController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_admin!
   before_action :set_vehiculo, only: [:show, :edit, :update, :destroy]
 
 
@@ -23,6 +23,7 @@ class VehiculosController < ApplicationController
   def edit
   end
 
+
   # POST /vehiculos
   # POST /vehiculos.json
   def create
@@ -37,6 +38,19 @@ class VehiculosController < ApplicationController
         format.json { render json: @vehiculo.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def devolver
+
+    @vehiculo = Vehiculo.find(params[:id])
+    @vehiculo.update_attributes(disponibilidad: true)
+
+  end
+
+  def historial
+
+    @vehiculo = Vehiculo.find(params[:id])
+
   end
 
   # PATCH/PUT /vehiculos/1
@@ -70,6 +84,6 @@ class VehiculosController < ApplicationController
     end
 
     def vehiculo_params
-      params.require(:vehiculo).permit(:marca, :modelo, :color, :tipo, :kilometraje, :capacidadPasajeros, :observaciones, :image)
+      params.require(:vehiculo).permit(:placa, :marca, :modelo, :color, :tipo, :kilometraje, :anio, :capacidadPasajeros, :capacidadCarga, :observaciones, :disponibilidad,:nro_chasis, :cilindraje,  {avatars: []})
     end
 end

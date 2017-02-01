@@ -15,5 +15,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require chosen-jquery
+//= require underscore
+//= require json2
+//= require judge
 
 //= require_tree .
+
+

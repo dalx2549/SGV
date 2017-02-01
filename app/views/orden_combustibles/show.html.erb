@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Estacionservicio:</strong>
+  <%= @orden_combustible.estacionServicio %>
+</p>
+
+<p>
+  <strong>Vehiculo placa:</strong>
+  <%= @orden_combustible.vehiculo_placa %>
+</p>
+
+<p>
+  <strong>Tipocombustible:</strong>
+  <%= @orden_combustible.tipoCombustible %>
+</p>
+
+<p>
+  <strong>Valorcompra:</strong>
+  <%= @orden_combustible.valorCompra %>
+</p>
+
+<p>
+  <strong>Persona:</strong>
+  <%= @orden_combustible.persona %>
+</p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @orden_combustible.cedula %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @orden_combustible.cargo %>
+</p>
+
+<%= link_to 'Edit', edit_orden_combustible_path(@orden_combustible) %> |
+<%= link_to 'Back', orden_combustibles_path %>

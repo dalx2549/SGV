@@ -1,0 +1,61 @@
+<%= bootstrap_form_for(orden_combustible) do |f| %>
+  <% if orden_combustible.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orden_combustible.errors.count, "error") %> prohibited this orden_combustible from being saved:</h2>
+
+      <ul>
+      <% orden_combustible.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :estacionServicio, label:"Estación de servicio:" %>
+  </div>
+
+  <div class="field">
+    <%= f.select :vehiculo_placa,
+                   options_from_collection_for_select(Vehiculo.all, "id", "id"), class: "chosen-select"
+    %>
+  </div>
+
+  <div class="field">
+    <%= f.date_select :fechaEmision, label:"Fecha de emisión:", :start_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
+  </div>
+
+  <div class="field">
+    <%= f.select :tipoCombustible, options_for_select([["Super", "Super"], ["Extra", "Extra"], ["EcoPais", "EcoPais"], ["Diesel", "Diesel"]]) %>
+
+  </div>
+
+  <div class="field">
+    <%= f.text_field :valorCompra, :maxlength => "6", 'data-validation' => 'number', 'data-validation-allowing' => 'range[1;999.99],float' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :persona, 'data-validation' => 'alphanumeric' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :cedula, label: "Cédula", :maxlength => "10",'data-validation' => 'number' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :cargo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<script>
+
+  $.validate({
+    lang: 'es'
+  });
+
+</script>

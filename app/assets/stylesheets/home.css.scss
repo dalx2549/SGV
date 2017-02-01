@@ -1,0 +1,124 @@
+.navbar-default .navbar-brand{
+
+  color: #ffffff;
+  font-size: 21px;
+
+}
+
+.navbar-default:hover .navbar-brand:hover{
+
+  color: white;
+
+}
+
+.navbar-brand{
+
+  padding: 1.4em;
+  font-family: "Arial";
+
+}
+
+nav{
+
+    height: 75px;
+    border-radius: 0px;
+}
+
+.navbar-default{
+
+    background-color: #003f72;
+    border-color:  #003f72;
+    color: white;
+    border-radius: 0px;
+}
+
+.jumbotron{
+
+  background-color: #003f72;
+  color: white;
+  border-radius: 15px;
+
+}
+
+.logo{
+
+  display: inline;
+  margin: auto;
+  width: 90%;
+}
+
+.container{
+
+  padding-top: 5em;
+  padding-left: 3em;
+  padding-right: 3em;
+
+}
+
+.btn{
+
+  display: inline-block;
+  position: relative;
+  right: 6px;
+
+}
+
+.navbar-default .navbar-nav > li > a{
+
+  color: white;
+  font-weight: bold;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  -webkit-transition-duration: 0.6s; /* Safari */
+  transition-duration: 0.6s;
+
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+
+  background-color: #ffffff;
+  color: #003f72;
+
+}
+
+.navbar-default .navbar-text{
+
+  color: white;
+  padding-top: 1em;
+
+}
+
+.navbar-default .navbar-text > mark{
+
+  background-color: white;
+  border-radius: 3px;
+  color: #003f72 ;
+  text-align: center;
+  font-style: italic;
+
+}
+
+.logof {
+
+  background-color: #eeeeee;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 3px;
+  color: #003f72;
+
+}
+
+.logof:hover{
+
+  background-color: #003f72;
+  color: white;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  text-decoration: none;
+
+}

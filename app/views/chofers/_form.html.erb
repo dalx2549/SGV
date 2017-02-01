@@ -1,0 +1,116 @@
+<%= bootstrap_form_for(chofer) do |f| %>
+    <% if chofer.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(chofer.errors.count, "error") %> prohibited this chofer from being saved:</h2>
+
+          <ul>
+            <% chofer.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+    <div class="field">
+      <%=	 f.text_field :cedula, label: "Cédula", :maxlength => "10" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :nombres, 'data-validation' => 'alphanumeric' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :apellidos, 'data-validation' => 'alphanumeric' %>
+    </div>
+
+    <div class="field">
+      <%=	 f.email_field :email, 'data-validation' => 'email' %>
+    </div>
+
+    <div class="field">
+      <%=	 f.text_field :direccion %>
+    </div>
+
+    <div class="field">
+      <%=	 f.telephone_field :telefono %>
+    </div>
+
+    <div class="field">
+      <%= f.date_select :fechaNacimiento, label: "Fecha de Nacimiento", :start_year => 1950 %>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="field">
+          <%= f.text_field :tipoLicencia, id: "mytext", label: " Tipo de licencia", :readonly => true %>
+        </div>
+
+        <div class="dropdown">
+
+          <strong>Seleccione:</strong>
+
+          <select class="form-control" id="dropdown" >
+
+            <option value="" disabled selected>Seleccione una o varias opciones</option>
+            <option value="A">A</option>
+            <option value="A1">A1</option>
+            <option value="B">B</option>
+            <option value="C1">C1</option>
+            <option value="C">C</option>
+            <option value="D1">D1</option>
+            <option value="D">D</option>
+            <option value="E1">E1</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+
+          </select>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+
+
+      <%=	 f.file_field :avatar, label: "Foto" %>
+
+    </div>
+
+    <div class="field">
+
+      <%=	 f.file_field :licencias, :multiple => true %>
+
+    </div>
+
+
+    <div class="field">
+      <%= f.text_area :experiencia %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+
+  var mytextbox = document.getElementById('mytext');
+  var mydropdown = document.getElementById('dropdown');
+
+  mydropdown.onchange = function () {
+    mytextbox.value = mytextbox.value + this.value + ", "; //to appened
+    mytextbox.innerHTML = this.value;
+  }
+
+</script>
+
+
+<script>
+
+  $.validate({
+    lang: 'es'
+  });
+
+</script>

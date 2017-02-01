@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Choferes</h1>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Fecha Nacimiento</th>
+      <th>Tipo de Licencia</th>
+      <th>Experiencia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chofers.each do |chofer| %>
+      <tr>
+        <td><%= chofer.nombres %></td>
+        <td><%= chofer.apellidos %></td>
+        <td><%= chofer.fechaNacimiento %></td>
+        <td><%= chofer.tipoLicencia %></td>
+        <td><%= chofer.experiencia %></td>
+        <td><%= link_to 'Mostrar', chofer, class: "btn btn-default" %></td>
+        <td><%= link_to 'Editar', edit_chofer_path(chofer), class: "btn btn-default" %></td>
+        <td><%= link_to 'Eliminar', chofer, method: :delete, data: { confirm: 'Estás seguro?' }, class: "btn btn-default" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Chofer', new_chofer_path, class: "btn btn-default" %>

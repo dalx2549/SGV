@@ -1,0 +1,65 @@
+<%= bootstrap_form_for(orden_mantenimiento) do |f| %>
+  <% if orden_mantenimiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orden_mantenimiento.errors.count, "error") %> prohibited this orden_mantenimiento from being saved:</h2>
+
+      <ul>
+      <% orden_mantenimiento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= f.select :vehiculo_placa,
+                 Vehiculo.all.map { |u| [u.placa, u.marca] },
+                 { include_blank: true},
+                 { class: 'chosen-select'}
+    %>
+  </div>
+
+  <div class="field">
+
+    <%= f.select :tipo, options_for_select([["Preventivo", "preventivo"], ["Correctivo", "correctivo"]]) %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :kilometraje, :maxlength => "6", 'data-validation' => 'number' %>
+  </div>
+
+    <div class="field">
+      <%=	 f.text_area :detalle %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :encargado, 'data-validation' => 'alphanumeric' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :cedula, label: "Cédula", :maxlength => "10", 'data-validation' => 'number' %>
+    </div>
+
+
+
+    <div class="field">
+      <%= f.text_field :cargo %>
+    </div>
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<script>
+
+  $.validate({
+    lang: 'es'
+  });
+
+</script>

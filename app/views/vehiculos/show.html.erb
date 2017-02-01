@@ -38,7 +38,15 @@
   <%= @vehiculo.observaciones %>
 </p>
 
-<p><%= image_tag @vehiculo.image.url(:medium) %></p>
+<p><strong>Imagenes</strong>
+s
+  <% @vehiculo.avatars.each do |i| %>
+
+      <%= image_tag(i) %>
+
+  <% end %>
+
+</p>
 
 <div>
 
