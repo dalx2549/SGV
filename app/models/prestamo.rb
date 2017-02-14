@@ -1,8 +1,11 @@
 class Prestamo < ApplicationRecord
 
+  #Objeto pertenece a Usuario
   belongs_to :user, :foreign_key=>"user_cedula"
+  #Objeto pertenece a Vehiculo
   belongs_to :vehiculo, :foreign_key => "vehiculo_placa"
 
+  #Valida la presencia de los atributos requeridos
   validates_presence_of :fechaEntrega
   validates_presence_of :fechaDevolucion
   validates_presence_of :razon

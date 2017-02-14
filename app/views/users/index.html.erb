@@ -1,7 +1,15 @@
 <h1>Lista de Usuarios: </h1>
 <% @users = User.all %>
 
-<table class="table table-responsive">
+<script>
+
+  $(document).ready(function() {
+    $('#tabla-usuarios').DataTable();
+  } );
+
+</script>
+
+<table id="tabla-usuarios" class="display" width="100%">
 
   <thead>
   <tr>
@@ -14,6 +22,7 @@
     <th>Cargo</th>
     <th>Departamento</th>
     <th>Estado</th>
+    <th></th>
 
   </tr>
   </thead>
@@ -37,9 +46,9 @@
             <td>Aprobado</td>
         <% end %>
 
-        <td><%= link_to 'Show', user, class: "btn btn-default" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
-        <td><%= link_to 'Approve', user, method: :post, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+        <td><%= link_to 'Mostrar', user, class: "btn btn-default" %>
+        <%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+        <%= link_to 'Aprobar', user, method: :post, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
       </tr>
   <% end %>
 

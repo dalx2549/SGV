@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+#RubyCritic for static code analysis
+gem "rubycritic", :require => false
+#Sidekiq for asynchronous tasks
+gem 'sidekiq'
+#Delayed Job for queuing background tasks
+gem 'delayed_job_active_record'
 #MiniMagick for resize image attachments
 gem "mini_magick"
 #Client-side HTML5 validators

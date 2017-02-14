@@ -1,14 +1,26 @@
+
+
+<h1>Ordenes de Mantenimiento</h1>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Orden Mantenimientos</h1>
+<script>
 
-<table class="table table-responsive">
+  $(document).ready(function() {
+    $('#tabla-ordenes-mantenimiento').DataTable();
+  } );
+
+</script>
+
+<table id="tabla-ordenes-mantenimiento" class="display" width="100%">
   <thead>
     <tr>
       <th>Vehiculo placa</th>
       <th>Tipo</th>
       <th>Kilometraje</th>
-      <th colspan="3"></th>
+      <th>Encargado</th>
+      <th>Cédula</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -18,9 +30,11 @@
         <td><%= orden_mantenimiento.vehiculo_placa %></td>
         <td><%= orden_mantenimiento.tipo %></td>
         <td><%= orden_mantenimiento.kilometraje %></td>
-        <td><%= link_to 'Show', orden_mantenimiento %></td>
-        <td><%= link_to 'Edit', edit_orden_mantenimiento_path(orden_mantenimiento) %></td>
-        <td><%= link_to 'Destroy', orden_mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td> <%=	 orden_mantenimiento.encargado %> </td>
+        <td><%= orden_mantenimiento.cedula %></td>
+        <td><%= link_to 'Mostrar', orden_mantenimiento %>
+        <%= link_to 'Editar', edit_orden_mantenimiento_path(orden_mantenimiento) %>
+        <%= link_to 'Eliminar', orden_mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Orden Mantenimiento', new_orden_mantenimiento_path %>
+<%= link_to 'Nueva Orden Mantenimiento', new_orden_mantenimiento_path %>

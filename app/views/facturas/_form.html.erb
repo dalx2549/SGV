@@ -41,7 +41,7 @@
   <div class="field">
 
     <%= f.select :id_orden_mantenimiento,
-                 options_from_collection_for_select(OrdenMantenimiento.all, "id", "id"), class: "chosen-select", label: "Orden de mantenimiento"
+                 options_from_collection_for_select(OrdenMantenimiento.all, "id", "id"), class: "chosen-select", label: "Orden de mantenimiento", 'include-blank' => 'true'
     %>
   </div>
 

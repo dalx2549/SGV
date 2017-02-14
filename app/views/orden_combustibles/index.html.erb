@@ -1,11 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Orden Combustibles</h1>
+<h1>Órdenes de Combustible</h1>
 
-<table class="table table-responsive">
+<script>
+
+  $(document).ready(function() {
+    $('#tabla-ordenes-combustible').DataTable();
+  } );
+
+</script>
+
+<table id="tabla-ordenes-combustible" class="display" width="100%">
   <thead>
     <tr>
-      <th>Id orden</th>
+
       <th>Estacionservicio</th>
       <th>Vehiculo placa</th>
       <th>Tipocombustible</th>
@@ -13,7 +21,7 @@
       <th>Persona</th>
       <th>Cedula</th>
       <th>Cargo</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -28,9 +36,9 @@
         <td><%= orden_combustible.persona %></td>
         <td><%= orden_combustible.cedula %></td>
         <td><%= orden_combustible.cargo %></td>
-        <td><%= link_to 'Show', orden_combustible %></td>
-        <td><%= link_to 'Edit', edit_orden_combustible_path(orden_combustible) %></td>
-        <td><%= link_to 'Destroy', orden_combustible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', orden_combustible %>
+        <%= link_to 'Edit', edit_orden_combustible_path(orden_combustible) %>
+        <%= link_to 'Destroy', orden_combustible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

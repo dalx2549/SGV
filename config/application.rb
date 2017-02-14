@@ -14,5 +14,6 @@ module SGV
 
     config.active_record.primary_key = :uuid
 
+
   end
 end
