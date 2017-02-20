@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+#Brakeman for Security tests
+gem "brakeman", :require => false
+#Generate Test Fixtures from DB
+gem 'db_fixtures_dump'
 #RubyCritic for static code analysis
 gem "rubycritic", :require => false
 #Sidekiq for asynchronous tasks

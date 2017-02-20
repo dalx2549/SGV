@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :vehiculos
+
   match '/users',   to: 'users#index',   via: 'get'
   match '/users/:id',     to: 'users#show',       via: 'get'
 
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   post 'prestamos/:id' => 'prestamos#approve'
 
   #Obtiene la id del vehículo seleccionado y la envía al método devolver del controlador
-  post 'vehiculos/:id' => 'vehiculos#devolver'
+  #post 'vehiculos/:id' => 'vehiculos#devolver'
 
   # get 'vehiculos/:id' => 'vehiculos#historial'
 
@@ -27,7 +29,7 @@ Rails.application.routes.draw do
   resources :chofers
   resources :orden_mantenimientos
   resources :orden_combustibles
-  resources :vehiculos
+
 
   devise_for :admins
 

@@ -4,15 +4,15 @@
 
 <script>
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('#tabla-prestamo').DataTable();
-  } );
+  });
 
 </script>
 
 <h1>Prestamos</h1>
 
-<table  id="tabla-prestamo" class="display"  width="100%">
+<table id="tabla-prestamo" class="display" width="100%">
   <thead>
   <tr>
     <th>Fecha Entrega</th>
@@ -42,17 +42,25 @@
             <td>Aprobado</td>
         <% end %>
 
+
+
         <td>
-        <%= link_to 'Mostrar', prestamo, class: "btn btn-default" %>
 
-        <% if admin_signed_in? %>
+          <div class="btn-group btn-group-sm" role="group" aria-label="...">
 
-            <%= link_to 'Editar', edit_prestamo_path(prestamo) %>
-            <%= link_to 'Eliminar', prestamo, method: :delete, data: {confirm: 'Estás seguro?'} %>
-            <%= link_to 'Aprobar', prestamo, method: :post, data: {confirm: 'Estás seguro?'} %>
+            <%= link_to 'Mostrar', prestamo, class: "btn btn-default" %>
+
+            <% if admin_signed_in? %>
+
+                <%= link_to 'Editar', edit_prestamo_path(prestamo), class: "btn btn-default" %>
+                <%= link_to 'Eliminar', prestamo, method: :delete, data: {confirm: 'Estás seguro?'}, class: "btn btn-default" %>
+                <%= link_to 'Aprobar', prestamo, method: :post, data: {confirm: 'Estás seguro?'}, class: "btn btn-default" %>
 
 
-        <% end %>
+            <% end %>
+
+          </div>
+
         </td>
       </tr>
   <% end %>
@@ -63,9 +71,9 @@
 
 <% if user_signed_in? %>
 
-<%= link_to 'New Prestamo', new_prestamo_path %>
+    <%= link_to 'Nuevo Prestamo', new_prestamo_path, class: "btn btn-default" %>
 
-<%	 end %>
+<% end %>
 
 
 

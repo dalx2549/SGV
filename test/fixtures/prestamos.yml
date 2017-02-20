@@ -5,13 +5,13 @@ one:
   fechaDevolucion: 2016-10-20
   razon: MyText
   observaciones: MyText
-  persona_id: 1
-  vehiculo_id: 1
+  user_cedula: 1
+  vehiculo_placa: 1
 
 two:
   fechaEntrega: 2016-10-20
   fechaDevolucion: 2016-10-20
   razon: MyText
   observaciones: MyText
-  persona_id: 1
-  vehiculo_id: 1
+  user_cedula: 1
+  vehiculo_placa: 1

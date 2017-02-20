@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id_orden: 1
+  id: 1
   estacionServicio: MyString
   vehiculo_placa: MyString
   tipoCombustible: MyString
@@ -11,7 +11,7 @@ one:
   cargo: MyString
 
 two:
-  id_orden: 1
+  id: 2
   estacionServicio: MyString
   vehiculo_placa: MyString
   tipoCombustible: MyString

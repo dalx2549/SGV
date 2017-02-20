@@ -1,6 +1,7 @@
 class VehiculosController < ApplicationController
-  before_action :authenticate_admin!
   before_action :set_vehiculo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
+
 
 
   # GET /vehiculos
@@ -84,6 +85,6 @@ class VehiculosController < ApplicationController
     end
 
     def vehiculo_params
-      params.require(:vehiculo).permit(:placa, :marca, :modelo, :color, :tipo, :kilometraje, :anio, :capacidadPasajeros, :capacidadCarga, :observaciones, :disponibilidad,:nro_chasis, :cilindraje,  {avatars: []})
+      params.require(:vehiculo).permit(:placa, :marca, :modelo, :color, :tipo, :kilometraje, :anio, :capacidadPasajeros, :capacidadCarga, :observaciones, :disponibilidad,:nro_chasis, :cilindraje,  {avatars: []}, :traccion)
     end
 end

@@ -15,13 +15,7 @@ class FacturasControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create factura" do
-    assert_difference('Factura.count') do
-      post facturas_url, params: { factura: { emisor: @factura.emisor, id_orden_combustible: @factura.id_orden_combustible, id_orden_mantenimiento: @factura.id_orden_mantenimiento, id_orden_respuesto: @factura.id_orden_respuesto, numero: @factura.numero } }
-    end
 
-    assert_redirected_to factura_url(Factura.last)
-  end
 
   test "should show factura" do
     get factura_url(@factura)

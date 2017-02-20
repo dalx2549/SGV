@@ -15,13 +15,9 @@ class OrdenMantenimientosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create orden_mantenimiento" do
-    assert_difference('OrdenMantenimiento.count') do
-      post orden_mantenimientos_url, params: { orden_mantenimiento: { kilometraje: @orden_mantenimiento.kilometraje, tipo: @orden_mantenimiento.tipo, vehiculo_placa: @orden_mantenimiento.vehiculo_placa } }
-    end
 
-    assert_redirected_to orden_mantenimiento_url(OrdenMantenimiento.last)
-  end
+
+
 
   test "should show orden_mantenimiento" do
     get orden_mantenimiento_url(@orden_mantenimiento)

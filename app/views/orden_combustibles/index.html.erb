@@ -4,29 +4,29 @@
 
 <script>
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('#tabla-ordenes-combustible').DataTable();
-  } );
+  });
 
 </script>
 
 <table id="tabla-ordenes-combustible" class="display" width="100%">
   <thead>
-    <tr>
+  <tr>
 
-      <th>Estacionservicio</th>
-      <th>Vehiculo placa</th>
-      <th>Tipocombustible</th>
-      <th>Valorcompra</th>
-      <th>Persona</th>
-      <th>Cedula</th>
-      <th>Cargo</th>
-      <th></th>
-    </tr>
+    <th>Estacionservicio</th>
+    <th>Vehiculo placa</th>
+    <th>Tipocombustible</th>
+    <th>Valorcompra</th>
+    <th>Persona</th>
+    <th>Cedula</th>
+    <th>Cargo</th>
+    <th></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @orden_combustibles.each do |orden_combustible| %>
+  <% @orden_combustibles.each do |orden_combustible| %>
       <tr>
 
         <td><%= orden_combustible.estacionServicio %></td>
@@ -36,14 +36,19 @@
         <td><%= orden_combustible.persona %></td>
         <td><%= orden_combustible.cedula %></td>
         <td><%= orden_combustible.cargo %></td>
-        <td><%= link_to 'Show', orden_combustible %>
-        <%= link_to 'Edit', edit_orden_combustible_path(orden_combustible) %>
-        <%= link_to 'Destroy', orden_combustible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+
+          <div class="btn-group btn-group-sm" role="group" aria-label="...">
+            <%= link_to 'Mostrar', orden_combustible, class: "btn btn-default" %>
+            <%= link_to 'Editar', edit_orden_combustible_path(orden_combustible), class: "btn btn-default" %>
+            <%= link_to 'Eliminar', orden_combustible, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-default" %>
+          </div>
+        </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Orden Combustible', new_orden_combustible_path %>
+<%= link_to 'Nueva Orden de combustible', new_orden_combustible_path, class: "btn btn-default" %>

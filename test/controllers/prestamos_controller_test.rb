@@ -5,19 +5,13 @@ class PrestamosControllerTest < ActionDispatch::IntegrationTest
     @prestamo = prestamos(:one)
   end
 
-  test "should get index" do
-    get prestamos_url
-    assert_response :success
-  end
 
-  test "should get new" do
-    get new_prestamo_url
-    assert_response :success
-  end
+
+
 
   test "should create prestamo" do
     assert_difference('Prestamo.count') do
-      post prestamos_url, params: { prestamo: { fechaDevolucion: @prestamo.fechaDevolucion, fechaEntrega: @prestamo.fechaEntrega, observaciones: @prestamo.observaciones, persona_id: @prestamo.persona_id, razon: @prestamo.razon, vehiculo_id: @prestamo.vehiculo_id } }
+      post prestamos_url, params: { prestamo: { fechaDevolucion: @prestamo.fechaDevolucion, fechaEntrega: @prestamo.fechaEntrega, observaciones: @prestamo.observaciones, user_cedula: @prestamo.user_cedula, razon: @prestamo.razon, vehiculo_placa: @prestamo.vehiculo_placa } }
     end
 
     assert_redirected_to prestamo_url(Prestamo.last)
@@ -28,13 +22,10 @@ class PrestamosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_prestamo_url(@prestamo)
-    assert_response :success
-  end
+
 
   test "should update prestamo" do
-    patch prestamo_url(@prestamo), params: { prestamo: { fechaDevolucion: @prestamo.fechaDevolucion, fechaEntrega: @prestamo.fechaEntrega, observaciones: @prestamo.observaciones, persona_id: @prestamo.persona_id, razon: @prestamo.razon, vehiculo_id: @prestamo.vehiculo_id } }
+    patch prestamo_url(@prestamo), params: { prestamo: { fechaDevolucion: @prestamo.fechaDevolucion, fechaEntrega: @prestamo.fechaEntrega, observaciones: @prestamo.observaciones, user_cedula: @prestamo.user_cedula, razon: @prestamo.razon, vehiculo_placa: @prestamo.vehiculo_placa } }
     assert_redirected_to prestamo_url(@prestamo)
   end
 

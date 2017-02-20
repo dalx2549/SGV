@@ -26,17 +26,17 @@
       <object-id>16791</object-id>
     </database>
     <database id="9" name="SGV_development">
-      <object-id>17747</object-id>
+      <object-id>18251</object-id>
       <visible>1</visible>
     </database>
     <database id="10" name="SGV_test">
-      <object-id>17748</object-id>
+      <object-id>18583</object-id>
     </database>
     <schema id="11" parent="9" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>1433</introspection-state-number>
-      <introspection-timestamp>2017-02-05.12:12:18.398</introspection-timestamp>
+      <introspection-state-number>1637</introspection-state-number>
+      <introspection-timestamp>2017-02-15.11:52:18.355</introspection-timestamp>
     </schema>
     <schema id="12" parent="9" name="pg_catalog">
       <object-id>11</object-id>
@@ -54,903 +54,903 @@
       <object-id>12349</object-id>
     </schema>
     <sequence id="17" parent="11" name="admins_id_seq">
-      <object-id>18013</object-id>
-      <state-number>1295</state-number>
+      <object-id>18335</object-id>
+      <state-number>1613</state-number>
     </sequence>
     <sequence id="18" parent="11" name="delayed_jobs_id_seq">
-      <object-id>18223</object-id>
-      <state-number>1433</state-number>
+      <object-id>18422</object-id>
+      <state-number>1637</state-number>
     </sequence>
     <sequence id="19" parent="11" name="orden_combustibles_id_seq">
-      <object-id>18047</object-id>
-      <state-number>1303</state-number>
+      <object-id>18302</object-id>
+      <state-number>1610</state-number>
     </sequence>
     <sequence id="20" parent="11" name="orden_mantenimientos_id_seq">
-      <object-id>18058</object-id>
-      <state-number>1305</state-number>
+      <object-id>18313</object-id>
+      <state-number>1611</state-number>
     </sequence>
     <sequence id="21" parent="11" name="orden_repuestos_id_seq">
-      <object-id>18069</object-id>
-      <state-number>1307</state-number>
+      <object-id>18376</object-id>
+      <state-number>1617</state-number>
     </sequence>
     <sequence id="22" parent="11" name="prestamos_id_seq">
-      <object-id>18080</object-id>
-      <state-number>1309</state-number>
+      <object-id>18278</object-id>
+      <state-number>1608</state-number>
     </sequence>
     <table id="23" parent="11" name="admins">
-      <object-id>18015</object-id>
-      <state-number>1295</state-number>
+      <object-id>18337</object-id>
+      <state-number>1613</state-number>
     </table>
     <table id="24" parent="11" name="ar_internal_metadata">
-      <object-id>17872</object-id>
-      <state-number>1267</state-number>
+      <object-id>18261</object-id>
+      <state-number>1606</state-number>
     </table>
     <table id="25" parent="11" name="chofers">
-      <object-id>18029</object-id>
-      <state-number>1418</state-number>
+      <object-id>18359</object-id>
+      <state-number>1636</state-number>
     </table>
     <table id="26" parent="11" name="delayed_jobs">
-      <object-id>18225</object-id>
-      <state-number>1433</state-number>
+      <object-id>18424</object-id>
+      <state-number>1637</state-number>
     </table>
     <table id="27" parent="11" name="facturas">
-      <object-id>18038</object-id>
-      <state-number>1385</state-number>
+      <object-id>18413</object-id>
+      <state-number>1629</state-number>
     </table>
     <table id="28" parent="11" name="orden_combustibles">
-      <object-id>18049</object-id>
-      <state-number>1303</state-number>
+      <object-id>18304</object-id>
+      <state-number>1610</state-number>
     </table>
     <table id="29" parent="11" name="orden_mantenimientos">
-      <object-id>18060</object-id>
-      <state-number>1407</state-number>
+      <object-id>18315</object-id>
+      <state-number>1634</state-number>
     </table>
     <table id="30" parent="11" name="orden_repuestos">
-      <object-id>18071</object-id>
-      <state-number>1405</state-number>
+      <object-id>18378</object-id>
+      <state-number>1632</state-number>
     </table>
     <table id="31" parent="11" name="prestamos">
-      <object-id>18082</object-id>
-      <state-number>1410</state-number>
+      <object-id>18280</object-id>
+      <state-number>1635</state-number>
     </table>
     <table id="32" parent="11" name="schema_migrations">
-      <object-id>17864</object-id>
-      <state-number>1264</state-number>
+      <object-id>18253</object-id>
+      <state-number>1605</state-number>
     </table>
     <table id="33" parent="11" name="users">
-      <object-id>18092</object-id>
-      <state-number>1311</state-number>
+      <object-id>18289</object-id>
+      <state-number>1612</state-number>
     </table>
     <table id="34" parent="11" name="vehiculos">
-      <object-id>18107</object-id>
-      <state-number>1408</state-number>
+      <object-id>18269</object-id>
+      <state-number>1633</state-number>
     </table>
     <routine id="35" parent="11" name="uuid_generate_v1">
-      <object-id>17755</object-id>
-      <state-number>1249</state-number>
+      <object-id>18397</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="36" parent="11" name="uuid_generate_v1mc">
-      <object-id>17756</object-id>
-      <state-number>1249</state-number>
+      <object-id>18398</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="37" parent="11" name="uuid_generate_v3">
-      <object-id>17757</object-id>
-      <state-number>1249</state-number>
+      <object-id>18399</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="38" parent="11" name="uuid_generate_v4">
-      <object-id>17758</object-id>
-      <state-number>1249</state-number>
+      <object-id>18400</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="39" parent="11" name="uuid_generate_v5">
-      <object-id>17759</object-id>
-      <state-number>1249</state-number>
+      <object-id>18401</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="40" parent="11" name="uuid_nil">
-      <object-id>17750</object-id>
-      <state-number>1249</state-number>
+      <object-id>18392</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="41" parent="11" name="uuid_ns_dns">
-      <object-id>17751</object-id>
-      <state-number>1249</state-number>
+      <object-id>18393</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="42" parent="11" name="uuid_ns_oid">
-      <object-id>17753</object-id>
-      <state-number>1249</state-number>
+      <object-id>18395</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="43" parent="11" name="uuid_ns_url">
-      <object-id>17752</object-id>
-      <state-number>1249</state-number>
+      <object-id>18394</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <routine id="44" parent="11" name="uuid_ns_x500">
-      <object-id>17754</object-id>
-      <state-number>1249</state-number>
+      <object-id>18396</object-id>
+      <state-number>1624</state-number>
       <routine-kind>FUNCTION</routine-kind>
     </routine>
     <column id="45" parent="23" name="id">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;admins_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="46" parent="23" name="email">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
       <default-expression>&apos;&apos;::character varying</default-expression>
     </column>
     <column id="47" parent="23" name="encrypted_password">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
       <default-expression>&apos;&apos;::character varying</default-expression>
     </column>
     <column id="48" parent="23" name="reset_password_token">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="49" parent="23" name="reset_password_sent_at">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="50" parent="23" name="remember_created_at">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="51" parent="23" name="sign_in_count">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="52" parent="23" name="current_sign_in_at">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="53" parent="23" name="last_sign_in_at">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="54" parent="23" name="current_sign_in_ip">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="55" parent="23" name="last_sign_in_ip">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="56" parent="23" name="created_at">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="57" parent="23" name="updated_at">
-      <state-number>1295</state-number>
+      <state-number>1613</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="58" parent="23" name="admins_pkey">
-      <object-id>18025</object-id>
+      <object-id>18347</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="59" parent="23" name="index_admins_on_email">
-      <object-id>18027</object-id>
+      <object-id>18349</object-id>
       <columns>email</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="60" parent="23" name="index_admins_on_reset_password_token">
-      <object-id>18028</object-id>
+      <object-id>18350</object-id>
       <columns>reset_password_token</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="61" parent="23" name="admins_pkey">
-      <object-id>18026</object-id>
+      <object-id>18348</object-id>
       <columns>id</columns>
       <underlying-index>admins_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="62" parent="24" name="key">
-      <state-number>1267</state-number>
+      <state-number>1606</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
     <column id="63" parent="24" name="value">
-      <state-number>1267</state-number>
+      <state-number>1606</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="64" parent="24" name="created_at">
-      <state-number>1267</state-number>
+      <state-number>1606</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="65" parent="24" name="updated_at">
-      <state-number>1267</state-number>
+      <state-number>1606</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="66" parent="24" name="ar_internal_metadata_pkey">
-      <object-id>17878</object-id>
+      <object-id>18267</object-id>
       <columns>key</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="67" parent="24" name="ar_internal_metadata_pkey">
-      <object-id>17879</object-id>
+      <object-id>18268</object-id>
       <columns>key</columns>
       <underlying-index>ar_internal_metadata_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="68" parent="25" name="cedula">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
     <column id="69" parent="25" name="nombres">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
     <column id="70" parent="25" name="apellidos">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
     <column id="71" parent="25" name="fechaNacimiento">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
     </column>
     <column id="72" parent="25" name="tipoLicencia">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
     <column id="73" parent="25" name="experiencia">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <data-type>text|0</data-type>
       <default-expression>&apos;&apos;::text</default-expression>
     </column>
     <column id="74" parent="25" name="created_at">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="75" parent="25" name="updated_at">
-      <state-number>1299</state-number>
+      <state-number>1615</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="76" parent="25" name="avatar">
-      <state-number>1299</state-number>
+      <state-number>1620</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="77" parent="25" name="direccion">
-      <state-number>1403</state-number>
+      <state-number>1630</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="78" parent="25" name="email">
-      <state-number>1403</state-number>
+      <state-number>1630</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="79" parent="25" name="telefono">
-      <state-number>1403</state-number>
+      <state-number>1630</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="80" parent="25" name="licencias">
-      <state-number>1418</state-number>
+      <state-number>1636</state-number>
       <data-type>json|0</data-type>
     </column>
     <index id="81" parent="25" name="chofers_pkey">
-      <object-id>18036</object-id>
+      <object-id>18366</object-id>
       <columns>cedula</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="82" parent="25" name="chofers_pkey">
-      <object-id>18037</object-id>
+      <object-id>18367</object-id>
       <columns>cedula</columns>
       <underlying-index>chofers_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="83" parent="26" name="id">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;delayed_jobs_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="84" parent="26" name="priority">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="85" parent="26" name="attempts">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="86" parent="26" name="handler">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
     <column id="87" parent="26" name="last_error">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="88" parent="26" name="run_at">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="89" parent="26" name="locked_at">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="90" parent="26" name="failed_at">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="91" parent="26" name="locked_by">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="92" parent="26" name="queue">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="93" parent="26" name="created_at">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="94" parent="26" name="updated_at">
-      <state-number>1433</state-number>
+      <state-number>1637</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="95" parent="26" name="delayed_jobs_pkey">
-      <object-id>18234</object-id>
+      <object-id>18433</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="96" parent="26" name="delayed_jobs_priority">
-      <object-id>18236</object-id>
+      <object-id>18435</object-id>
       <columns>priority
 run_at</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="97" parent="26" name="delayed_jobs_pkey">
-      <object-id>18235</object-id>
+      <object-id>18434</object-id>
       <columns>id</columns>
       <underlying-index>delayed_jobs_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="98" parent="27" name="id">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <mandatory>1</mandatory>
       <data-type>uuid|0</data-type>
       <default-expression>uuid_generate_v4()</default-expression>
     </column>
     <column id="99" parent="27" name="emisor">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="100" parent="27" name="numero">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="101" parent="27" name="id_orden_combustible">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="102" parent="27" name="id_orden_respuesto">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="103" parent="27" name="id_orden_mantenimiento">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="104" parent="27" name="created_at">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="105" parent="27" name="updated_at">
-      <state-number>1301</state-number>
+      <state-number>1626</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="106" parent="27" name="avatar">
-      <state-number>1301</state-number>
+      <state-number>1627</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="107" parent="27" name="observaciones">
-      <state-number>1385</state-number>
+      <state-number>1629</state-number>
       <data-type>text|0</data-type>
     </column>
     <index id="108" parent="27" name="facturas_pkey">
-      <object-id>18045</object-id>
+      <object-id>18420</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="109" parent="27" name="facturas_pkey">
-      <object-id>18046</object-id>
+      <object-id>18421</object-id>
       <columns>id</columns>
       <underlying-index>facturas_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="110" parent="28" name="id">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;orden_combustibles_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="111" parent="28" name="estacionServicio">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="112" parent="28" name="vehiculo_placa">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="113" parent="28" name="fechaEmision">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>date|0</data-type>
     </column>
     <column id="114" parent="28" name="tipoCombustible">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="115" parent="28" name="valorCompra">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>numeric|0</data-type>
     </column>
     <column id="116" parent="28" name="persona">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="117" parent="28" name="cedula">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="118" parent="28" name="cargo">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="119" parent="28" name="created_at">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="120" parent="28" name="updated_at">
-      <state-number>1303</state-number>
+      <state-number>1610</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <index id="121" parent="28" name="orden_combustibles_pkey">
-      <object-id>18056</object-id>
+      <object-id>18311</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="122" parent="28" name="orden_combustibles_pkey">
-      <object-id>18057</object-id>
+      <object-id>18312</object-id>
       <columns>id</columns>
       <underlying-index>orden_combustibles_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="123" parent="29" name="id">
-      <state-number>1305</state-number>
+      <state-number>1611</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;orden_mantenimientos_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="124" parent="29" name="vehiculo_placa">
-      <state-number>1305</state-number>
+      <state-number>1611</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="125" parent="29" name="tipo">
-      <state-number>1305</state-number>
+      <state-number>1611</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="126" parent="29" name="kilometraje">
-      <state-number>1305</state-number>
+      <state-number>1611</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="127" parent="29" name="created_at">
-      <state-number>1305</state-number>
+      <state-number>1611</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="128" parent="29" name="updated_at">
-      <state-number>1305</state-number>
+      <state-number>1611</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="129" parent="29" name="encargado">
-      <state-number>1305</state-number>
+      <state-number>1618</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="130" parent="29" name="cedula">
-      <state-number>1305</state-number>
+      <state-number>1618</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="131" parent="29" name="cargo">
-      <state-number>1305</state-number>
+      <state-number>1618</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="132" parent="29" name="detalle">
-      <state-number>1407</state-number>
+      <state-number>1634</state-number>
       <data-type>text|0</data-type>
     </column>
     <index id="133" parent="29" name="orden_mantenimientos_pkey">
-      <object-id>18067</object-id>
+      <object-id>18322</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="134" parent="29" name="orden_mantenimientos_pkey">
-      <object-id>18068</object-id>
+      <object-id>18323</object-id>
       <columns>id</columns>
       <underlying-index>orden_mantenimientos_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="135" parent="30" name="id">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;orden_repuestos_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="136" parent="30" name="fecha">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <data-type>date|0</data-type>
     </column>
     <column id="137" parent="30" name="encargado">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="138" parent="30" name="proveedor">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="139" parent="30" name="observaciones">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="140" parent="30" name="vehiculo_placa">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="141" parent="30" name="created_at">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="142" parent="30" name="updated_at">
-      <state-number>1307</state-number>
+      <state-number>1617</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="143" parent="30" name="detalle">
-      <state-number>1404</state-number>
+      <state-number>1631</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="144" parent="30" name="avatar">
-      <state-number>1405</state-number>
+      <state-number>1632</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <index id="145" parent="30" name="orden_repuestos_pkey">
-      <object-id>18078</object-id>
+      <object-id>18385</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="146" parent="30" name="orden_repuestos_pkey">
-      <object-id>18079</object-id>
+      <object-id>18386</object-id>
       <columns>id</columns>
       <underlying-index>orden_repuestos_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="147" parent="31" name="id">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>nextval(&apos;prestamos_id_seq&apos;::regclass)</default-expression>
     </column>
     <column id="148" parent="31" name="fechaEntrega">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <data-type>date|0</data-type>
     </column>
     <column id="149" parent="31" name="fechaDevolucion">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <data-type>date|0</data-type>
     </column>
     <column id="150" parent="31" name="razon">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="151" parent="31" name="observaciones">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="152" parent="31" name="user_cedula">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="153" parent="31" name="vehiculo_placa">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="154" parent="31" name="created_at">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="155" parent="31" name="updated_at">
-      <state-number>1309</state-number>
+      <state-number>1608</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="156" parent="31" name="approved">
-      <state-number>1309</state-number>
+      <state-number>1614</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
     <column id="157" parent="31" name="cargo">
-      <state-number>1383</state-number>
+      <state-number>1628</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="158" parent="31" name="departamento">
-      <state-number>1383</state-number>
+      <state-number>1628</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="159" parent="31" name="chofer">
-      <state-number>1410</state-number>
+      <state-number>1635</state-number>
       <data-type>boolean|0</data-type>
     </column>
     <index id="160" parent="31" name="prestamos_pkey">
-      <object-id>18090</object-id>
+      <object-id>18287</object-id>
       <columns>id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="161" parent="31" name="prestamos_pkey">
-      <object-id>18091</object-id>
+      <object-id>18288</object-id>
       <columns>id</columns>
       <underlying-index>prestamos_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="162" parent="32" name="version">
-      <state-number>1264</state-number>
+      <state-number>1605</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
     <index id="163" parent="32" name="schema_migrations_pkey">
-      <object-id>17870</object-id>
+      <object-id>18259</object-id>
       <columns>version</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="164" parent="32" name="schema_migrations_pkey">
-      <object-id>17871</object-id>
+      <object-id>18260</object-id>
       <columns>version</columns>
       <underlying-index>schema_migrations_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="165" parent="33" name="cedula">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
     <column id="166" parent="33" name="email">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
       <default-expression>&apos;&apos;::character varying</default-expression>
     </column>
     <column id="167" parent="33" name="encrypted_password">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
       <default-expression>&apos;&apos;::character varying</default-expression>
     </column>
     <column id="168" parent="33" name="reset_password_token">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="169" parent="33" name="reset_password_sent_at">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="170" parent="33" name="remember_created_at">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="171" parent="33" name="sign_in_count">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="172" parent="33" name="current_sign_in_at">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="173" parent="33" name="last_sign_in_at">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="174" parent="33" name="current_sign_in_ip">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="175" parent="33" name="last_sign_in_ip">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="176" parent="33" name="name">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="177" parent="33" name="last_name">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="178" parent="33" name="telephone">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="179" parent="33" name="charge">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="180" parent="33" name="department">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="181" parent="33" name="created_at">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="182" parent="33" name="updated_at">
-      <state-number>1311</state-number>
+      <state-number>1609</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="183" parent="33" name="approved">
-      <state-number>1311</state-number>
+      <state-number>1612</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>false</default-expression>
     </column>
     <index id="184" parent="33" name="users_pkey">
-      <object-id>18102</object-id>
+      <object-id>18298</object-id>
       <columns>cedula</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="185" parent="33" name="index_users_on_email">
-      <object-id>18105</object-id>
+      <object-id>18300</object-id>
       <columns>email</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="186" parent="33" name="index_users_on_reset_password_token">
-      <object-id>18106</object-id>
+      <object-id>18301</object-id>
       <columns>reset_password_token</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <index id="187" parent="33" name="index_users_on_approved">
-      <object-id>18104</object-id>
+      <object-id>18334</object-id>
       <columns>approved</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="188" parent="33" name="users_pkey">
-      <object-id>18103</object-id>
+      <object-id>18299</object-id>
       <columns>cedula</columns>
       <underlying-index>users_pkey</underlying-index>
       <primary>1</primary>
     </key>
     <column id="189" parent="34" name="placa">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
     </column>
     <column id="190" parent="34" name="marca">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="191" parent="34" name="modelo">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="192" parent="34" name="color">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="193" parent="34" name="tipo">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="194" parent="34" name="anio">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="195" parent="34" name="kilometraje">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="196" parent="34" name="capacidadPasajeros">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>integer|0</data-type>
     </column>
     <column id="197" parent="34" name="capacidadCarga">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>numeric|0</data-type>
     </column>
     <column id="198" parent="34" name="observaciones">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <data-type>text|0</data-type>
     </column>
     <column id="199" parent="34" name="disponibilidad">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <mandatory>1</mandatory>
       <data-type>boolean|0</data-type>
       <default-expression>true</default-expression>
     </column>
     <column id="200" parent="34" name="created_at">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="201" parent="34" name="updated_at">
-      <state-number>1316</state-number>
+      <state-number>1607</state-number>
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
     </column>
     <column id="202" parent="34" name="traccion">
-      <state-number>1316</state-number>
+      <state-number>1616</state-number>
       <mandatory>1</mandatory>
       <data-type>varchar|0</data-type>
       <default-expression>&apos;&apos;::character varying</default-expression>
     </column>
     <column id="203" parent="34" name="avatars">
-      <state-number>1316</state-number>
+      <state-number>1619</state-number>
       <data-type>json|0</data-type>
     </column>
     <column id="204" parent="34" name="nro_chasis">
-      <state-number>1406</state-number>
+      <state-number>1633</state-number>
       <data-type>varchar|0</data-type>
     </column>
     <column id="205" parent="34" name="cilindraje">
-      <state-number>1406</state-number>
+      <state-number>1633</state-number>
       <data-type>integer|0</data-type>
     </column>
     <index id="206" parent="34" name="vehiculos_pkey">
-      <object-id>18115</object-id>
+      <object-id>18276</object-id>
       <columns>placa</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="207" parent="34" name="vehiculos_pkey">
-      <object-id>18116</object-id>
+      <object-id>18277</object-id>
       <columns>placa</columns>
       <underlying-index>vehiculos_pkey</underlying-index>
       <primary>1</primary>
