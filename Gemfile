@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#FullCalendar for show events
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 #Brakeman for Security tests
 gem "brakeman", :require => false
 #Generate Test Fixtures from DB

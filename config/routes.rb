@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :vehiculos
+
 
   match '/users',   to: 'users#index',   via: 'get'
   match '/users/:id',     to: 'users#show',       via: 'get'
@@ -18,10 +18,13 @@ Rails.application.routes.draw do
 
   # get 'vehiculos/:id' => 'vehiculos#historial'
 
+  get :email_aprobado, to: 'prestamos#email_aprobado', as: :email_aprobado
+
   mount Judge::Engine => '/judge'
 
   #Resources provee GET, POST, PATCH/PUT(Update) y DELETE para el objeto indicado (Proporciona rutas para CRUD completo)
 
+  resources :vehiculos
   resources :users, :only =>[:show]
   resources :prestamos
   resources :facturas

@@ -18,6 +18,9 @@
 //= require underscore
 //= require json2
 //= require judge
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/lang/es
 
 //= require_tree .
 

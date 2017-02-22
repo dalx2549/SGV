@@ -1,0 +1,2 @@
+class ChoferRegistradoMailer < ApplicationMailer
+end

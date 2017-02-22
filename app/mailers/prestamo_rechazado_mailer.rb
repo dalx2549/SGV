@@ -1,0 +1,2 @@
+class PrestamoRechazadoMailer < ApplicationMailer
+end

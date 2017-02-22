@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+  <meta content="text/html"; charset="UTF-8" http-equiv='Content-Type'>
+
+</head>
+
+<body>
+
+<h2>Notificación de Registro</h2>
+<h3>Sistema de Gestión Vehicular UTPL</h3>
+
+<p>
+  <strong>
+  Estimado <%=	 @user.name %> &nbsp; <%=	 @user.last_name %>
+  </strong>
+</p>
+
+<p>
+
+  Su proceso de registro ha sido completado satisfactoriamente, inmediatamente podrá acceder a la plataforma
+  con su correo y contraseña proporcionados.
+
+</p>
+
+<p>Su Contraseña es: <%=	 @user.password %></p>
+
+</body>
+
+</html>

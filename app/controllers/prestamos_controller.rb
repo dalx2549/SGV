@@ -52,6 +52,8 @@ class PrestamosController < ApplicationController
   def create
     @prestamo = Prestamo.new(prestamo_params)
 
+
+
     respond_to do |format|
       if @prestamo.save
         #Muestra el prestamo creado
@@ -87,18 +89,33 @@ class PrestamosController < ApplicationController
   def approve
 
     @prestamo = Prestamo.find(params[:id])
-    @prestamo.update_attributes(approved: true)
+    @prestamo.update_attribute(:approved, true)
     redirect_to prestamos_url
 
     # Modifica disponibilidad del vehiculo
-    @vehiculo = Vehiculo.where(placa: @prestamo.vehiculo_placa) #Query para seleccionar el vehiculo del prestamo.
-    @vehiculo.update(disponibilidad: false) #Cambia atributo a false
+    # @vehiculo = Vehiculo.where(placa: @prestamo.vehiculo_placa) #Query para seleccionar el vehiculo del prestamo.
 
-    id = @vehiculo.ids
+    #Cambia atributo a false
 
+    fecha_futura = @prestamo.fechaEntrega
 
-    logger.info id
-    PrestamoWorker.perform_in(2.minutes, 10)
+    tRestante = fecha_futura.to_time - Time.now
+
+    logger.info tRestante
+
+    email_aprobado
+
+    PrestamoWorker.perform_in(tRestante.seconds, 10)
+
+  end
+
+  def email_aprobado
+
+    @prestamo = Prestamo.find(params[:id])
+    @user = User.find(@prestamo.user_cedula)
+
+    PrestamoAprobadoMailer.send_email(@prestamo, @user).deliver
+    flash[:notice] = "Prestamo ha sido aprobado"
 
   end
 

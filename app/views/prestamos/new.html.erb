@@ -1,5 +1,48 @@
 <h1>Nuevo Préstamo</h1>
 
-<%= render 'form', prestamo: @prestamo %>
+<div class="row">
+
+  <div class="col-md-8">
+
+    <%= render 'form', prestamo: @prestamo %>
+
+  </div>
+
+  <div class="col-md-4">
+
+    <div id="calendar"></div>
+
+    <% @prestamos = Prestamo.where(:approved => true) %>
+    <% @vehiculos = Vehiculo.all %>
+
+    <script>
+
+      $('#calendar').fullCalendar({
+
+        lang: "es",
+
+        events:[
+
+            <% @prestamos.each do |event| %>{
+
+            <% actual = @vehiculos.find_by(:placa => event.vehiculo_placa) %>
+
+            title : "<%= event.vehiculo_placa %>  <%= actual.marca %>  <%= actual.modelo %>",
+            start : "<%= event.fechaEntrega.strftime '%Y-%m-%d' %>",
+            end : "<%= event.fechaDevolucion.strftime '%Y-%m-%d' %>"
+
+          },
+            <% end %>
+        ],
+
+      });
+
+    </script>
+
+  </div>
+
+</div>
+
+
 
 <%= link_to 'Regresar', prestamos_path, class: "btn btn-default" %>
