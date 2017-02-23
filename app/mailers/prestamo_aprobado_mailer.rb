@@ -7,7 +7,8 @@ class PrestamoAprobadoMailer < ApplicationMailer
     @user = persona
     @prestamo = prestamo
 
-    mail(to: "#{@user.email}", subject: "Notificación de aprobación de prestamo", template_path: 'usuario_aprobado_mailer', template_name: 'usuarioa_email')
+    mail(to: "#{@user.email}", subject: "Notificación de aprobación de prestamo",
+         template_path: 'prestamo_aprobado_mailer', template_name: 'prestamoa_email')
 
   end
 

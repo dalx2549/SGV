@@ -21,5 +21,16 @@ class UsersController < ApplicationController
     @user.update_attributes(approved: true)
     redirect_to users_url
 
+    email_user_aprobado
+
   end
+
+  def email_user_aprobado
+
+    @user = User.find(params[:id])
+
+    UsuarioAprobadoMailer.send_email_usuario(@user).deliver
+
+  end
+
 end

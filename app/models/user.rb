@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :prestamos
   accepts_nested_attributes_for :prestamos
 
+  validates_uniqueness_of :cedula
   validates_presence_of :cedula
   validates :cedula, length: {maximum:10}
   validates :cedula, numericality: {only_integer: true}

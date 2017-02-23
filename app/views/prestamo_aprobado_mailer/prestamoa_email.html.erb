@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+  <meta content="text/html"; charset="UTF-8" http-equiv='Content-Type'>
+
+</head>
+
+<body>
+
+<h2>Notificación de Prestamo</h2>
+<h3>Sistema de Gestión Vehicular UTPL</h3>
+
+<p>
+  <strong>
+    Estimado <%=	 @user.name %> <%=	 @user.last_name %>
+  </strong>
+</p>
+
+<p>
+
+  El préstamo del vehículo con placa:  <%=	 @prestamo.vehiculo_placa %> ha sido aprobado con desde <%=	 @prestamo.fechaEntrega %> hasta
+  <%=	 @prestamo.fechaDevolucion %>.
+
+</p>
+
+<p>
+
+  Solicitar al encargado la entrega del vehículo dentro del plazo del préstamo.
+
+</p>
+
+</body>
+
+</html>
