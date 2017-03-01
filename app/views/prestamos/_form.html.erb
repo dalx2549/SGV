@@ -30,14 +30,14 @@
     <div class="field">
 
       <%= f.select :vehiculo_placa,
-                   options_from_collection_for_select(Vehiculo.all, "id", "id"), class: "chosen-select"
+                   options_from_collection_for_select(Vehiculo.where(:disponibilidad => true), "id", "id"), class: "chosen-select"
       %>
 
     </div>
 
     <div class="field">
 
-      <%=	 f.check_box :chofer, label: "¿Desea conductor?" %>
+      <%=	 f.check_box :chofer, {label: "¿Desea conductor?"}, true, false  %>
 
     </div>
 

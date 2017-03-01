@@ -1,7 +1,7 @@
 <div class="alert alert-warning" role="alert">
 
   <%	 @prestamos = Prestamo.all %>
-  <strong>Tienes: &nbsp;</strong><%=	 @prestamos.where(:approved => false).count %><strong> &nbsp; prestamos por aprobar </strong>
+  <strong>Tienes: &nbsp;</strong><%=	 @prestamos.where(:approved => false, :rechazado => false).count %><strong> &nbsp; prestamos por aprobar </strong>
 
 </div>
 

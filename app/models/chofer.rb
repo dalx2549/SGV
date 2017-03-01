@@ -1,5 +1,7 @@
 class Chofer < ApplicationRecord
 
+  has_many :prestamos
+  accepts_nested_attributes_for :prestamos
   mount_uploader :avatar, AvatarUploader
   mount_uploaders :licencias, LicenciaUploader
 

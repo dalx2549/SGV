@@ -58,6 +58,9 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
+    bootstrap-glyphicons (0.0.1)
+      railties (>= 3.0)
+      sass (>= 3.2)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     bootstrap_form (2.5.2)
@@ -275,6 +278,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bootstrap-glyphicons
   bootstrap-sass (~> 3.2.0)
   bootstrap_form
   brakeman

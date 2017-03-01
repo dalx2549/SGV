@@ -7,6 +7,8 @@ class Prestamo < ApplicationRecord
   #Objeto pertenece a Vehiculo
   belongs_to :vehiculo, :foreign_key => "vehiculo_placa"
 
+
+
   #Valida la presencia de los atributos requeridos
   validates_presence_of :fechaEntrega
   validates_presence_of :fechaDevolucion
@@ -15,7 +17,7 @@ class Prestamo < ApplicationRecord
   validates_presence_of :vehiculo_placa
 
   validates_uniqueness_of :fechaEntrega, scope: [:vehiculo_placa, :approved]
-
+  validates_uniqueness_of :chofer_cedula, scope: [:fechaEntrega]
 
 
 end

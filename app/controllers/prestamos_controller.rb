@@ -45,6 +45,8 @@ class PrestamosController < ApplicationController
 
   # GET /prestamos/1/edit
   def edit
+
+
   end
 
   # POST /prestamos
@@ -84,6 +86,15 @@ class PrestamosController < ApplicationController
         format.json { render json: @prestamo.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def rechazar
+
+    @prestamo = Prestamo.find(params[:id])
+    @prestamo.update_attribute(:rechazado, true)
+
+    redirect_to prestamos_url
+
   end
 
   def approve
@@ -142,7 +153,7 @@ class PrestamosController < ApplicationController
 
   #Define parámetros permitidos para crear un prestamo
   def prestamo_params
-    params.require(:prestamo).permit(:fechaEntrega, :fechaDevolucion, :razon, :observaciones, :user_cedula, :vehiculo_placa, :chofer)
+    params.require(:prestamo).permit(:fechaEntrega, :fechaDevolucion, :razon, :observaciones, :user_cedula, :vehiculo_placa, :chofer, :chofer_cedula, :rechazado)
   end
 
 

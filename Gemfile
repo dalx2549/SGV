@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Bootstrap glyphicons
+gem 'bootstrap-glyphicons'
 #FullCalendar for show events
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
