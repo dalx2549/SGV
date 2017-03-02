@@ -1,7 +1,7 @@
 class PrestamoWorker
   include Sidekiq::Worker
 
-  def perform(*args)
+  def perform(id)
     # Do something
     logger.info "Tarea ejecutandose bla bla"
 

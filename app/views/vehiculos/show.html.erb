@@ -1,52 +1,266 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+
+  <div class="col-md-6">
 
 
-<p>
-  <strong>Marca:</strong>
-  <%= @vehiculo.marca %>
-</p>
+    <ul class="list-group">
 
-<p>
-  <strong>Modelo:</strong>
-  <%= @vehiculo.modelo %>
-</p>
+      <li class="list-group-item">
 
-<p>
-  <strong>Color:</strong>
-  <%= @vehiculo.color %>
-</p>
+        <span class="badge"> <%=	 @vehiculo.placa %> </span>
+        <strong>Placa: </strong>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @vehiculo.tipo %>
+      </li>
 
-</p>
+      <li class="list-group-item">
 
-<p>
-  <strong>Kilometraje:</strong>
-  <%= @vehiculo.kilometraje %>
-</p>
+        <span class="badge"> <%=	 @vehiculo.nro_chasis %> </span>
+        <strong>Nro. de chasis: </strong>
 
-<p>
-  <strong>Capacidad de Pasajeros:</strong>
-  <%= @vehiculo.capacidadPasajeros %>
-</p>
+      </li>
 
-<p>
-  <strong>Observaciones:</strong>
-  <%= @vehiculo.observaciones %>
-</p>
+      <li class="list-group-item">
 
-<p><strong>Imagenes</strong>
-s
-  <% @vehiculo.avatars.each do |i| %>
+        <span class="badge"> <%=	@vehiculo.marca %> </span>
+        <strong>Marca: </strong>
 
-      <%= image_tag(i) %>
+      </li>
 
-  <% end %>
+      <li class="list-group-item">
 
-</p>
+        <span class="badge"> <%=	@vehiculo.modelo %> </span>
+        <strong>Modelo: </strong>
+
+      </li>
+
+      <li class="list-group-item">
+
+        <span class="badge"> <%= @vehiculo.color %> </span>
+        <strong>Color: </strong>
+
+      </li>
+
+      <li class="list-group-item">
+
+        <span class="badge"> <%=	@vehiculo.tipo  %> </span>
+        <strong>Tipo: </strong>
+
+      </li>
+
+      <li class="list-group-item">
+
+        <span class="badge"> <%=	 @vehiculo.kilometraje %> </span>
+        <strong>Kilometraje: </strong>
+
+      </li>
+
+      <li class="list-group-item">
+
+        <span class="badge"> <%= @vehiculo.traccion %> </span>
+        <strong>Tracción: </strong>
+
+      </li>
+
+      <li class="list-group-item">
+
+        <span class="badge"> <%=	 @vehiculo.cilindraje %> </span>
+        <strong>Cilindraje: </strong>
+
+      </li>
+      
+      <li class="list-group-item">
+        
+        <span class="badge"> <%=	 @vehiculo.capacidadPasajeros %> </span>
+        <strong>Capacidad de pasajeros: </strong>
+        
+      </li>
+
+      <li class="list-group-item">
+
+        <span class="badge"> <%=	 @vehiculo.capacidadCarga %> </span>
+        <strong>Capacidad de carga(kg):</strong>
+
+      </li>
+
+      <li class="list-group-item">
+
+        <h4 class="list-group-item-heading">Observaciones: </h4>
+        <p class="list-group-item-text">
+
+          <%=	 @vehiculo.observaciones %>
+
+        </p>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="col-md-6">
+
+
+
+      <% @vehiculo.avatars.each do |i| %>
+
+          <%= image_tag(i,  class: "img-thumbnail" )%>
+
+      <% end %>
+
+
+
+  </div>
+
+
+</div>
+
+
+
+<div class="panel-success">
+
+  <div class="panel-heading">
+
+    <h3>Órdenes de Combustible</h3>
+
+  </div>
+
+  <div class="panel-body">
+
+    <table id="tabla-ordenes-combustible-vehiculo" class="display" width="100%">
+      <thead>
+      <tr>
+
+        <th>Estacionservicio</th>
+        <th>Tipocombustible</th>
+        <th>Valorcompra</th>
+        <th>Persona</th>
+        <th>Cedula</th>
+        <th>Cargo</th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @orden_combustibles.each do |orden_combustible| %>
+          <tr>
+
+            <td><%= orden_combustible.estacionServicio %></td>
+            <td><%= orden_combustible.tipoCombustible %></td>
+            <td><%= orden_combustible.valorCompra %></td>
+            <td><%= orden_combustible.persona %></td>
+            <td><%= orden_combustible.cedula %></td>
+            <td><%= orden_combustible.cargo %></td>
+            <td>
+
+              <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                <%= link_to 'Mostrar', orden_combustible, class: "btn btn-default" %>
+                <%= link_to 'Editar', edit_orden_combustible_path(orden_combustible), class: "btn btn-default" %>
+                <%= link_to 'Eliminar', orden_combustible, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-default" %>
+              </div>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<div class="panel-primary">
+
+  <div class="panel-heading">
+
+    <h3>Órdenes de Mantenimiento</h3>
+
+  </div>
+
+  <div class="panel-body">
+
+    <table id="tabla-ordenes-mantenimiento-vehiculo" class="display" width="100%">
+      <thead>
+      <tr>
+
+        <th>Tipo</th>
+        <th>Kilometraje</th>
+        <th>Encargado</th>
+        <th>Cédula</th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @orden_mantenimientos.each do |orden_mantenimiento| %>
+          <tr>
+
+            <td><%= orden_mantenimiento.tipo %></td>
+            <td><%= orden_mantenimiento.kilometraje %></td>
+            <td> <%= orden_mantenimiento.encargado %> </td>
+            <td><%= orden_mantenimiento.cedula %></td>
+            <td>
+              <%= link_to 'Mostrar', orden_mantenimiento %>
+              <%= link_to 'Editar', edit_orden_mantenimiento_path(orden_mantenimiento) %>
+              <%= link_to 'Eliminar', orden_mantenimiento, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<div class="panel-info">
+
+  <div class="panel-heading">
+
+    <h3>Órdenes de Repuestos</h3>
+
+  </div>
+
+  <div class="panel-body">
+
+    <table id="tabla-repuestos-vehiculo" class="display" width="100%">
+      <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Encargado</th>
+        <th>Proveedor</th>
+        <th>Detalle</th>
+        <th>Observaciones</th>
+
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @orden_repuestos.each do |orden_repuesto| %>
+          <tr>
+            <td><%= orden_repuesto.fecha %></td>
+            <td><%= orden_repuesto.encargado %></td>
+            <td><%= orden_repuesto.proveedor %></td>
+            <td><%= orden_repuesto.detalle %> </td>
+            <td><%= orden_repuesto.observaciones %></td>
+
+            <td>
+              <%= link_to 'Mostrar', orden_repuesto %>
+              <%= link_to 'Editar', edit_orden_repuesto_path(orden_repuesto) %>
+              <%= link_to 'Eliminar', orden_repuesto, method: :delete, data: {confirm: '¿Estás Seguro?'} %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+
+
+
+
 
 <div>
 
@@ -54,3 +268,25 @@ s
   <%= link_to 'Back', vehiculos_path, :class => "btn btn-success" %>
 
 </div>
+
+<script>
+
+  $.extend( $.fn.dataTable.defaults, {
+    responsive: true
+  } );
+
+  $(document).ready(function () {
+    $('#tabla-ordenes-combustible-vehiculo').DataTable();
+  });
+
+
+  $(document).ready(function () {
+    $('#tabla-ordenes-mantenimiento-vehiculo').DataTable();
+  });
+
+  $(document).ready(function () {
+    $('#tabla-repuestos-vehiculo').DataTable();
+  });
+
+
+</script>

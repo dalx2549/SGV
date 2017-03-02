@@ -13,6 +13,12 @@ class VehiculosController < ApplicationController
   # GET /vehiculos/1
   # GET /vehiculos/1.json
   def show
+
+    @vehiculo = Vehiculo.find(params[:id])
+    @orden_combustibles = OrdenCombustible.where(:vehiculo_placa => @vehiculo.id)
+    @orden_mantenimientos = OrdenMantenimiento.where(:vehiculo_placa => @vehiculo.id )
+    @orden_repuestos = OrdenRepuesto.where(:vehiculo_placa => @vehiculo.id)
+
   end
 
   # GET /vehiculos/new
