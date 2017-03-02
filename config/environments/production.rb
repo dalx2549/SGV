@@ -56,15 +56,16 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "SGV_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options =   { :host => 'your_app.herokuapp.com' }
+  config.action_mailer.default_url_options =   { :host => 'gestionvehicular.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
+      address: 'smtp.gmail.com',
       port: 587,
-      authentication: "plain",
+      domain: 'gmail.com',
+      authentication: 'plain',
       enable_starttls_auto: true,
-      user_name: "your_email@gmail.com",
-      password: "your_password"
+      user_name: ENV['MAILER'],
+      password: ENV['MAILER_PASSWORD']
 
   }
   # Ignore bad email addresses and do not raise email delivery errors.
