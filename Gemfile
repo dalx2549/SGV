@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Media Queries to responsive views
+gem 'sass-mediaqueries-rails'
 #Bootstrap glyphicons
 gem 'bootstrap-glyphicons'
 #FullCalendar for show events
