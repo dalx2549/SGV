@@ -18,3 +18,29 @@
   <%=	 @prestamos.where(:fechaDevolucion => Date.today).count  %> <strong>&nbsp; Prestamo(s) finalizan hoy.</strong>
 
 </div>
+
+<div>
+
+
+  <%	 @orden_mantenimientos = OrdenMantenimiento.all %>
+
+  <%	 @orden_mantenimientos.each do |orden|%>
+
+      <% @vehiculo= Vehiculo.where(:kilometraje => orden.kilometraje + 3000 , :placa => orden.vehiculo_placa) %>
+
+      <%	 if @vehiculo.exists? %>
+
+          <%	 @vehiculo.each do |veh| %>
+
+              <%=	 veh.placa %>
+
+          <%	 end %>
+
+      <%	 end %>
+
+
+
+   <%	 end %>
+
+
+</div>

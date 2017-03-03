@@ -2,13 +2,6 @@
 
 <h1>Órdenes de Combustible</h1>
 
-<script>
-
-  $(document).ready(function () {
-    $('#tabla-ordenes-combustible').DataTable();
-  });
-
-</script>
 
 <table id="tabla-ordenes-combustible" class="display" width="100%">
   <thead>
@@ -52,3 +45,15 @@
 <br>
 
 <%= link_to 'Nueva Orden de combustible', new_orden_combustible_path, class: "btn btn-default" %>
+
+<script>
+
+  $.extend( $.fn.dataTable.defaults, {
+    responsive: true
+  } );
+
+  $(document).ready(function () {
+    $('#tabla-ordenes-combustible').DataTable();
+  });
+
+</script>

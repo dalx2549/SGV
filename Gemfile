@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 #Media Queries to responsive views
 gem 'sass-mediaqueries-rails'
 #Bootstrap glyphicons

@@ -28,6 +28,8 @@ class VehiculosController < ApplicationController
 
   # GET /vehiculos/1/edit
   def edit
+
+    @vehiculo = Vehiculo.find(params[:id])
   end
 
 
@@ -54,11 +56,6 @@ class VehiculosController < ApplicationController
 
   end
 
-  def historial
-
-    @vehiculo = Vehiculo.find(params[:id])
-
-  end
 
   # PATCH/PUT /vehiculos/1
   # PATCH/PUT /vehiculos/1.json

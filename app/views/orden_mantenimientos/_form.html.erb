@@ -14,7 +14,7 @@
   <div class="field">
 
     <%= f.select :vehiculo_placa,
-                 Vehiculo.all.map { |u| [u.placa, u.marca] },
+                 Vehiculo.all.map { |u| [u.placa] },
                  { include_blank: true},
                  { class: 'chosen-select'}
     %>
