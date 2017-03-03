@@ -14,6 +14,10 @@
   ImageMagick:
   
   `brew install imagemagick`
+  
+  Redis
+  
+  `brew install redis`
 
 * Configuration
 
@@ -32,6 +36,8 @@
 
 * How to run the test suite
 
+  `redis-server`
+  `bundle exec sidekiq`
   `rails s`
 
 
