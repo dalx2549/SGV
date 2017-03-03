@@ -35,8 +35,8 @@
   ```
 
 * How to run the test suite
-  
-  ```
+
+  ```
   $ redis-server
   $ bundle exec sidekiq
   $ rails s
