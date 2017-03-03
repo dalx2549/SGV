@@ -38,7 +38,7 @@
 
   ```
   $ redis-server
-  $ bundle exec sidekiq
+   $ bundle exec sidekiq
   $ rails s
   ```
 
