@@ -5,7 +5,7 @@ class PrestamoWorker
 
   def perform(id)
     # Do something
-    logger.info "Tarea ejecutandose bla bla"
+    logger.info "Tarea ejecutandose"
     logger.info id
 
     @vehiculo = Vehiculo.where(placa: id)

@@ -20,4 +20,10 @@ class Prestamo < ApplicationRecord
   validates_uniqueness_of :chofer_cedula, scope: [:fechaEntrega]
 
 
+  def dropdown
+
+    "#{marca}, #{modelo}"
+
+  end
+
 end

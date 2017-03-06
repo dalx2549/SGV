@@ -28,7 +28,11 @@
           <h1>UTPL</h1>
           <p>Sistema de Gestión Vehicular</p>
 
+          <%	 if user_signed_in? %>
 
+          <h2>Bienvenido!</h2>
+
+          <% end %>
 
           <% if admin_signed_in? %>
 
@@ -47,14 +51,14 @@
 
               <div class="btn">
 
-                <%= link_to raw('<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Usuario'), new_user_session_path, class: "btn btn-primary" %>
+                <%= link_to raw('<span class="glyphicon glyphicon-user" aria-hidden="true"></span> INICIAR SESIÓN'), new_user_session_path, class: "btn btn-primary" %>
 
 
               </div>
 
-              <div class="btn">
-                <%= link_to 'Admin', new_admin_session_path, class: "btn btn-primary" %>
-              </div>
+
+
+
 
 
           <% end %>
@@ -63,7 +67,11 @@
 
         <div class="col-md-4">
 
+
+
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Universidad_Técnica_Particular_de_Loja.png/200px-Universidad_Técnica_Particular_de_Loja.png" class="logo">
+
+          <%= link_to 'Admin', new_admin_session_path, class: "admin" %>
 
         </div>
 
@@ -74,9 +82,20 @@
 
 <% end %>
 
+<%	 if admin_signed_in? && user_signed_in? %>
+
+    <% else %>
+
+    <footer>
 
 
 
+    </footer>
+
+
+
+
+<%	end  %>
 
 
 

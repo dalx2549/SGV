@@ -30,7 +30,7 @@
     <div class="field">
 
       <%= f.select :vehiculo_placa,
-                   options_from_collection_for_select(Vehiculo.where(:disponibilidad => true), "id", "id"), class: "chosen-select"
+                   Vehiculo.where(:disponibilidad => true).map{|c| ["#{c.marca}, #{c.modelo}, #{c.traccion}, #{c.capacidadPasajeros} Pax", c.id] }, { :prompt => "Seleccione el vehículo deseado" }, class: "chosen-select", label: "Vehículo"
       %>
 
     </div>
