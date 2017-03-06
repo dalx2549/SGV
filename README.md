@@ -9,29 +9,36 @@
   
   PostgreSQL 9.6:
   
-  `brew install postgresql`
+  `$ brew install postgresql`
   
   ImageMagick:
   
-  `brew install imagemagick`
+  `$ brew install imagemagick`
+  
+  Redis:
+  
+  `$ brew install redis`
 
 * Configuration
 
-  `bundle install`
+  `$ bundle install`
   
 * Database creation
 
-  `rake db:create`
+  `$ rake db:create`
   
 * Database initialization
   
   ```
-  rake db:migrate
-  rake db:seed
+  $ rake db:migrate
+  $ rake db:seed
   ```
 
 * How to run the test suite
 
-  `rails s`
-
+  ```
+  $ redis-server
+   $ bundle exec sidekiq
+  $ rails s
+  ```
 
