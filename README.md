@@ -37,7 +37,7 @@
   $ rake db:seed
   ```
 
-* How to run the test suite
+* How to run the app
 
   ```
   $ redis-server
