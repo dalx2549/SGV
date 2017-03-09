@@ -1,16 +1,8 @@
 
-
 <h1>Ordenes de Mantenimiento</h1>
 
 <p id="notice"><%= notice %></p>
 
-<script>
-
-  $(document).ready(function() {
-    $('#tabla-ordenes-mantenimiento').DataTable();
-  } );
-
-</script>
 
 <table id="tabla-ordenes-mantenimiento" class="display" width="100%">
   <thead>
@@ -43,3 +35,15 @@
 <br>
 
 <%= link_to 'Nueva Orden Mantenimiento', new_orden_mantenimiento_path, class: "btn btn-default" %>
+
+<script>
+
+  $.extend( $.fn.dataTable.defaults, {
+    responsive: true
+  } );
+
+  $(document).ready(function() {
+    $('#tabla-ordenes-mantenimiento').DataTable();
+  } );
+
+</script>

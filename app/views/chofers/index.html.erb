@@ -2,13 +2,6 @@
 
 <h1>Choferes</h1>
 
-<script>
-
-  $(document).ready(function() {
-    $('#tabla-choferes').DataTable();
-  } );
-
-</script>
 
 <table id="tabla-choferes" class="display" width="100%">
   <thead>
@@ -43,3 +36,15 @@
 <br>
 
 <%= link_to 'Nuevo Chofer', new_chofer_path, class: "btn btn-default" %>
+
+<script>
+
+  $.extend( $.fn.dataTable.defaults, {
+    responsive: true
+  } );
+
+  $(document).ready(function() {
+    $('#tabla-choferes').DataTable();
+  } );
+
+</script>

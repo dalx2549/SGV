@@ -2,13 +2,6 @@
 
 <h1>Órdenes de Repuestos</h1>
 
-<script>
-
-  $(document).ready(function() {
-    $('#tabla-repuestos').DataTable();
-  } );
-
-</script>
 
 <table id="tabla-repuestos" class="display" width="100%">
   <thead>
@@ -41,3 +34,15 @@
 <br>
 
 <%= link_to 'Nueva Orden de repuestos', new_orden_repuesto_path, class: "btn btn-default" %>
+
+<script>
+
+  $.extend( $.fn.dataTable.defaults, {
+    responsive: true
+  } );
+
+  $(document).ready(function() {
+    $('#tabla-repuestos').DataTable();
+  } );
+
+</script>

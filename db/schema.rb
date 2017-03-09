@@ -126,7 +126,7 @@ ActiveRecord::Schema.define(version: 20170228230843) do
     t.string   "departamento"
     t.boolean  "chofer"
     t.integer  "chofer_cedula"
-    t.boolean  "rechazado"
+    t.boolean  "rechazado",       default: false
   end
 
   create_table "users", primary_key: "cedula", id: :integer, force: :cascade do |t|

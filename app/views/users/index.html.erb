@@ -1,13 +1,7 @@
 <h1>Lista de Usuarios: </h1>
 <% @users = User.all %>
 
-<script>
 
-  $(document).ready(function() {
-    $('#tabla-usuarios').DataTable();
-  } );
-
-</script>
 
 <table id="tabla-usuarios" class="display" width="100%">
 
@@ -57,3 +51,15 @@
 </table>
 
 <br>
+
+<script>
+
+  $.extend( $.fn.dataTable.defaults, {
+    responsive: true
+  } );
+
+  $(document).ready(function() {
+    $('#tabla-usuarios').DataTable();
+  } );
+
+</script>
