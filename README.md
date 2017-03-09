@@ -9,7 +9,10 @@
   
   PostgreSQL 9.6:
   
-  `$ brew install postgresql`
+  ```
+  $ brew install postgresql
+  CREATE EXTENSION "uuid-ossp";
+  ```
   
   ImageMagick:
   
@@ -34,7 +37,7 @@
   $ rake db:seed
   ```
 
-* How to run the test suite
+* How to run the app
 
   ```
   $ redis-server
