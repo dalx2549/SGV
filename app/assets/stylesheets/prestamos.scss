@@ -2,6 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media print {
+
+  div.printable{
+
+    display: block;
+
+  }
+
+  div.no-printable{
+
+    display: none;
+
+  }
+
+}
+
+div.panel-primary{
+
+  background-color: #003f72;
+  color: #003f72;
+
+}
+
+div.panel-primary > .panel-heading{
+
+  background-color: #003f72;
+
+}
+
 
 div#tabla-prestamo_wrapper.dataTables_wrapper.no-footer{
 
@@ -29,3 +58,5 @@ div.fc-left{
   text-transform: capitalize;
 
 }
+
+

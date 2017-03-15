@@ -1,7 +1,7 @@
 <%= bootstrap_form_for(orden_combustible) do |f| %>
   <% if orden_combustible.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(orden_combustible.errors.count, "error") %> prohibited this orden_combustible from being saved:</h2>
+      <h2><%= pluralize(orden_combustible.errors.count, "error") %> no permite guardar esta orden:</h2>
 
       <ul>
       <% orden_combustible.errors.full_messages.each do |message| %>
@@ -17,8 +17,9 @@
 
   <div class="field">
     <%= f.select :vehiculo_placa,
-                   options_from_collection_for_select(Vehiculo.all, "id", "id"), class: "chosen-select"
+                 Vehiculo.all.map{|c| ["#{c.marca}, #{c.modelo}, #{c.tipo}, #{c.placa}", c.id] }, { :prompt => "Seleccione el vehículo deseado", label: "Vehículo" }
     %>
+
   </div>
 
   <div class="field">
@@ -26,16 +27,16 @@
   </div>
 
   <div class="field">
-    <%= f.select :tipoCombustible, options_for_select([["Super", "Super"], ["Extra", "Extra"], ["EcoPais", "EcoPais"], ["Diesel", "Diesel"]]) %>
+    <%= f.select :tipoCombustible, options_for_select([["Super", "Super"], ["Extra", "Extra"], ["EcoPais", "EcoPais"], ["Diesel", "Diesel"]]), label: "Tipo de combustible" %>
 
   </div>
 
   <div class="field">
-    <%= f.text_field :valorCompra, :maxlength => "6", 'data-validation' => 'number', 'data-validation-allowing' => 'range[1;999.99],float' %>
+    <%= f.text_field :valorCompra, :maxlength => "6", 'data-validation' => 'number', 'data-validation-allowing' => 'range[1;999.99],float', label: "Valor de compra" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :persona, 'data-validation' => 'alphanumeric' %>
+    <%= f.text_field :persona, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*'  %>
   </div>
 
   <div class="field">
@@ -47,7 +48,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar Orden", class: "btn btn-default" %>
   </div>
 <% end %>
 

@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+  errors:
+    messages:
+        not_saved:
+            one: "1 error ha impedido %{resource} de ser guardado:"
+            other: "%{count} errores impiden  %{resource} de ser guardado:"

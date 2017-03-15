@@ -1,5 +1,7 @@
-<h2>Nueva Factura</h2>
+<div class="page-header">
+  <h1>Factura <small>Nueva</small></h1>
+</div>
 
 <%= render 'form', factura: @factura %>
 
-<%= link_to 'Back', facturas_path %>
+<%= link_to 'Regresar', facturas_path, class: "btn btn-default" %>

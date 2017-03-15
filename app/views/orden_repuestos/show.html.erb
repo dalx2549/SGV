@@ -1,29 +1,172 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @orden_repuesto.fecha %>
-</p>
+<div class="printable">
 
-<p>
-  <strong>Encargado:</strong>
-  <%= @orden_repuesto.encargado %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Proveedor:</strong>
-  <%= @orden_repuesto.proveedor %>
-</p>
 
-<p>
-  <strong>Observaciones:</strong>
-  <%= @orden_repuesto.observaciones %>
-</p>
+    <div class="col-md-8">
 
-<p>
-  <strong>Vehiculo placa:</strong>
-  <%= @orden_repuesto.vehiculo_placa %>
-</p>
+      <div class="panel panel-primary">
 
-<%= link_to 'Edit', edit_orden_repuesto_path(@orden_repuesto) %> |
-<%= link_to 'Back', orden_repuestos_path %>
+        <div class="panel-heading">
+
+          Orden de Repuesto Nro. <%= @orden_repuesto.id %>
+
+        </div>
+
+        <div class="panel-body">
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Detalles</h4>
+
+            </div>
+
+            <ul class="list-group">
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_repuesto.fecha %> </span>
+                <strong>Fecha: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_repuesto.proveedor %> </span>
+                <strong>Proveedor: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <strong>Detalle: </strong> <%=	 @orden_repuesto.detalle %>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <strong>Observaciones: </strong> <%=	 @orden_repuesto.observaciones %>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Vehículo</h4>
+
+            </div>
+
+            <% @vehiculo = Vehiculo.where(:placa => @orden_repuesto.vehiculo_placa) %>
+
+            <% @vehiculo.each do |v| %>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.placa %> </span>
+                  <strong>Placa: </strong>
+
+                </li>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.marca %> </span>
+                  <strong>Marca: </strong>
+
+                </li>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.modelo %> </span>
+                  <strong>Modelo: </strong>
+
+                </li>
+
+            <% end %>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Encargado</h4>
+
+              <p>
+                <strong>Nombres: </strong> <%=	 @orden_repuesto.encargado %>
+              </p>
+
+              <p>
+                <strong>Cédula: </strong> <%=	 @orden_repuesto.cedula %>
+              </p>
+
+              <p>
+                <strong>Cargo: </strong> <%=	 @orden_repuesto.cargo %>
+              </p>
+
+            </div>
+
+            <div class="firma">
+
+
+
+              <h5>&nbsp;</h5>
+              <h5 style="text-align: center">_________________________</h5>
+              <h5 style="text-align: center">Administrador</h5>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="panel panel-primary">
+
+        <div class="panel-heading">
+
+          <h4 style="text-align: center">Foto</h4>
+
+        </div>
+
+        <div class="panel panel-default">
+
+          <div class="panel-body">
+
+            <%=	 image_tag @orden_repuesto.avatar, class: "img-thumbnail" %>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="no-printable">
+
+  <button onclick='window.print();return false;' class="btn btn-warning">Imprimir Orden</button>
+  <%= link_to 'Editar', edit_orden_repuesto_path(@orden_repuesto), class: "btn btn-default" %>
+  <%= link_to 'Regresar', orden_repuesto_path, class: "btn btn-default" %>
+
+</div>
+
+
+

@@ -17,13 +17,7 @@ class Prestamo < ApplicationRecord
   validates_presence_of :vehiculo_placa
 
   validates_uniqueness_of :fechaEntrega, scope: [:vehiculo_placa, :approved]
-  validates_uniqueness_of :chofer_cedula, scope: [:fechaEntrega]
 
 
-  def dropdown
-
-    "#{marca}, #{modelo}"
-
-  end
 
 end

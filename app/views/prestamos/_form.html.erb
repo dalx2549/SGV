@@ -30,24 +30,34 @@
     <div class="field">
 
       <%= f.select :vehiculo_placa,
-                   Vehiculo.where(:disponibilidad => true).map{|c| ["#{c.marca}, #{c.modelo}, #{c.traccion}, #{c.capacidadPasajeros} Pax", c.id] }, { :prompt => "Seleccione el vehículo deseado" }, class: "chosen-select", label: "Vehículo"
+                   Vehiculo.where(:disponibilidad => true).map{|c| ["#{c.marca}, #{c.modelo}, #{c.traccion}, #{c.capacidadPasajeros} Pax, #{c.tipo}", c.id] }, { :prompt => "Seleccione el vehículo deseado", label: "Vehículo" }
       %>
 
     </div>
 
     <div class="field">
 
-      <%=	 f.check_box :chofer, {label: "¿Desea conductor?"}, true, false  %>
+      <div class="panel panel-default">
+
+        <div class="panel-body">
+
+          <%=	 f.check_box :chofer, {label: "¿Desea conductor?"}, true, false  %>
+
+        </div>
+
+      </div>
+
+
 
     </div>
 
     <div class="field">
-      <%= f.text_field :user_cedula, :value => current_user.id, label: current_user.name + current_user.last_name %>
+      <%= f.text_field :user_cedula, :value => current_user.id, label: current_user.name + " " + current_user.last_name, :readonly => true %>
 
     </div>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Guardar Solicitud" %>
     </div>
 <% end %>
 

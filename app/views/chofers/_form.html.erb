@@ -29,11 +29,11 @@
     </div>
 
     <div class="field">
-      <%=	 f.text_field :direccion %>
+      <%=	 f.text_field :direccion, label: "Dirección" %>
     </div>
 
     <div class="field">
-      <%=	 f.telephone_field :telefono %>
+      <%=	 f.telephone_field :telefono, label: "Teléfono" %>
     </div>
 
     <div class="field">
@@ -90,7 +90,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Guardar Conductor" %>
     </div>
 <% end %>
 

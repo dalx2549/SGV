@@ -39,15 +39,15 @@
 
           <% if user_signed_in? %>
 
-              <li> <%= link_to 'Prestamos', prestamos_path %> </li>
+              <li> <%= link_to 'Préstamos', prestamos_path %> </li>
 
           <% end %>
 
           <% if admin_signed_in? %>
 
-              <li> <%= link_to 'Prestamos', prestamos_path %> </li>
+              <li> <%= link_to 'Préstamos', prestamos_path %> </li>
               <li> <%= link_to 'Vehículos', vehiculos_path %> </li>
-              <li> <%= link_to 'Choferes', chofers_path %> </li>
+              <li> <%= link_to 'Conductores', chofers_path %> </li>
 
           <% end %>
 

@@ -1,41 +1,153 @@
-<p id="notice"><%= notice %></p>
+
+<div class="printable">
+
+  <div class="row">
+
+    <div class="col-md-2">
+
+    </div>
+
+    <div class="col-md-8">
+
+      <div class="panel panel-primary">
+
+        <div class="panel-heading">
+
+          Orden de Combustible Nro. <%= @orden_combustible.id %>
+
+        </div>
+
+        <div class="panel-body">
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Detalles</h4>
+
+            </div>
+
+            <ul class="list-group">
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_combustible.fechaEmision %> </span>
+                <strong>Fecha de Emisión: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_combustible.estacionServicio %> </span>
+                <strong>Estación de Servicio: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_combustible.tipoCombustible %> </span>
+                <strong>Tipo de Combustible: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <span class="badge"> $ <%= @orden_combustible.valorCompra %> </span>
+                <strong>Valor de Compra: </strong>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Vehículo</h4>
+
+            </div>
+
+            <% @vehiculo = Vehiculo.where(:placa => @orden_combustible.vehiculo_placa) %>
+
+            <% @vehiculo.each do |v| %>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.placa %> </span>
+                  <strong>Placa: </strong>
+
+                </li>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.marca %> </span>
+                  <strong>Marca: </strong>
+
+                </li>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.modelo %> </span>
+                  <strong>Modelo: </strong>
+
+                </li>
+
+            <% end %>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Encargado</h4>
+
+              <p>
+                <strong>Nombres: </strong> <%=	 @orden_combustible.persona %>
+              </p>
+
+              <p>
+                <strong>Cédula: </strong> <%=	 @orden_combustible.cedula %>
+              </p>
+
+              <p>
+                <strong>Cargo: </strong> <%=	 @orden_combustible.cargo %>
+              </p>
+
+            </div>
+
+            <div class="firma">
 
 
 
-<p>
-  <strong>Estacionservicio:</strong>
-  <%= @orden_combustible.estacionServicio %>
-</p>
+                  <h5>&nbsp;</h5>
+                  <h5 style="text-align: center">_________________________</h5>
+                  <h5 style="text-align: center">Administrador</h5>
 
-<p>
-  <strong>Vehiculo placa:</strong>
-  <%= @orden_combustible.vehiculo_placa %>
-</p>
 
-<p>
-  <strong>Tipocombustible:</strong>
-  <%= @orden_combustible.tipoCombustible %>
-</p>
 
-<p>
-  <strong>Valorcompra:</strong>
-  <%= @orden_combustible.valorCompra %>
-</p>
+            </div>
 
-<p>
-  <strong>Persona:</strong>
-  <%= @orden_combustible.persona %>
-</p>
+          </div>
 
-<p>
-  <strong>Cedula:</strong>
-  <%= @orden_combustible.cedula %>
-</p>
+        </div>
 
-<p>
-  <strong>Cargo:</strong>
-  <%= @orden_combustible.cargo %>
-</p>
+      </div>
 
-<%= link_to 'Edit', edit_orden_combustible_path(@orden_combustible) %> |
-<%= link_to 'Back', orden_combustibles_path %>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="no-printable">
+
+  <button onclick='window.print();return false;' class="btn btn-warning">Imprimir Orden</button>
+  <%= link_to 'Editar', edit_orden_combustible_path(@orden_combustible), class: "btn btn-default" %>
+  <%= link_to 'Regresar', orden_combustibles_path, class: "btn btn-default" %>
+
+</div>
+
+

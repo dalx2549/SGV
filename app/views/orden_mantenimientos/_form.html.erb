@@ -14,10 +14,9 @@
   <div class="field">
 
     <%= f.select :vehiculo_placa,
-                 Vehiculo.all.map { |u| [u.placa] },
-                 { include_blank: true},
-                 { class: 'chosen-select'}
+                 Vehiculo.all.map{|c| ["#{c.marca}, #{c.modelo}, #{c.tipo}, #{c.placa}", c.id] }, { :prompt => "Seleccione el vehículo deseado", label: "Vehículo" }
     %>
+
   </div>
 
   <div class="field">
@@ -34,7 +33,7 @@
     </div>
 
     <div class="field">
-      <%= f.text_field :encargado, 'data-validation' => 'alphanumeric' %>
+      <%= f.text_field :encargado, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
     </div>
 
     <div class="field">
@@ -51,7 +50,7 @@
 
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar Orden" %>
   </div>
 <% end %>
 

@@ -1,4 +1,6 @@
-<h1>Nueva Orden de Mantenimiento</h1>
+<div class="page-header">
+  <h1>Orden de Mantenimiento <small>Nueva</small></h1>
+</div>
 
 <div class="container">
 
@@ -7,6 +9,8 @@
     <div class="col-xs-6">
 
       <%= render 'form', orden_mantenimiento: @orden_mantenimiento %>
+
+      <%= link_to 'Regresar', orden_mantenimientos_path, class: "btn btn-default" %>
 
     </div>
 
@@ -22,4 +26,4 @@
 
 
 
-<%= link_to 'Back', orden_mantenimientos_path %>
+

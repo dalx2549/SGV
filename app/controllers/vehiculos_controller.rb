@@ -88,6 +88,6 @@ class VehiculosController < ApplicationController
     end
 
     def vehiculo_params
-      params.require(:vehiculo).permit(:placa, :marca, :modelo, :color, :tipo, :kilometraje, :anio, :capacidadPasajeros, :capacidadCarga, :observaciones, :disponibilidad,:nro_chasis, :cilindraje,  {avatars: []}, :traccion)
+      params.require(:vehiculo).permit(:placa, :marca, :modelo, :color, :tipo, :kilometraje, :anio, :capacidadPasajeros, :capacidadCarga, :observaciones, :disponibilidad,:nro_chasis, :cilindraje,  {avatars: []}, :traccion, :mantenimiento)
     end
 end

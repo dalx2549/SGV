@@ -1,38 +1,156 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fechaentrega:</strong>
-  <%= @prestamo.fechaEntrega %>
-</p>
+<div class="printable">
 
-<p>
-  <strong>Fechadevolucion:</strong>
-  <%= @prestamo.fechaDevolucion %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Razon:</strong>
-  <%= @prestamo.razon %>
-</p>
+    <div class="col-md-2"></div>
 
-<p>
-  <strong>Observaciones:</strong>
-  <%= @prestamo.observaciones %>
-</p>
+    <div class="col-md-8">
 
-<p>
-  <strong>Persona:</strong>
-  <%= @prestamo.user_cedula %>
-</p>
+      <div class="panel panel-primary">
 
-<p>
-  <strong>Vehiculo:</strong>
-  <%= @prestamo.vehiculo_placa %>
-</p>
+        <div class="panel-heading">
 
-<% if admin_signed_in? %>
+          <%	 if @prestamo.approved == true %>
 
-    <%= link_to 'Editar', edit_prestamo_path(@prestamo) %>
+              Préstamo Aprobado Nro. <%= @prestamo.id %>
 
-<% end %>
-<%= link_to 'Regresar', prestamos_path %>
+          <%	 else %>
+
+              Prestamo Nro. <%=	 @prestamo.id %>
+
+          <%	 end %>
+
+        </div>
+
+        <div class="panel-body">
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Persona</h4>
+
+              <% @user = User.where(:cedula => @prestamo.user_cedula) %>
+
+              <% @user.each do |u| %>
+
+                  <p><strong>Nombres: </strong> <%= u.name %> </p>
+
+                  <p><strong>Apellidos: </strong> <%= u.last_name %> </p>
+
+                  <p><strong>Cédula: </strong> <%= u.cedula %> </p>
+
+                  <p><strong>Cargo: </strong> <%= u.charge %> </p>
+
+                  <p><strong>Departamento: </strong> <%= u.department %> </p>
+
+              <% end %>
+
+            </div>
+
+          </div>
+
+          <ul class="list-group">
+
+            <li class="list-group-item">
+
+              <span class="badge">
+                <%= @prestamo.fechaEntrega %>
+              </span>
+              <strong>Fecha de Inicio:</strong>
+
+            </li>
+
+            <li class="list-group-item">
+
+              <span class="badge">
+                <%= @prestamo.fechaDevolucion %>
+              </span>
+              <strong>Fecha Devolución:</strong>
+
+            </li>
+
+            <li class="list-group-item">
+
+              <span class="badge">
+                <%= @prestamo.razon %>
+              </span>
+              <strong>Razón: </strong>
+
+            </li>
+
+            <li class="list-group-item">
+
+              <span class="badge">
+                <%= @prestamo.observaciones %>
+              </span>
+              <strong>Observaciones: </strong>
+
+            </li>
+
+          </ul>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Vehículo</h4>
+
+              <%	 @vehiculo = Vehiculo.where(:placa => @prestamo.vehiculo_placa) %>
+
+              <%	 @vehiculo.each do |v| %>
+
+                <p> <strong>Placa: </strong> <%=	 v.placa %> </p>
+                  <p> <strong>Marca: </strong> <%=	 v.marca %> </p>
+                  <p> <strong>Modelo: </strong> <%=	 v.modelo %> </p>
+                  <p> <strong>Color: </strong> <%=	 v.color %> </p>
+                  <p> <strong>Tipo: </strong> <%=	 v.tipo %> </p>
+
+              <%	 end %>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="col-md-1"></div>
+
+  </div>
+
+</div>
+
+
+<div class="no-printable">
+
+  <div class="row">
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+
+
+
+      <% if @prestamo.approved == true %>
+
+          <button onclick='window.print();return false;' class="btn btn-warning">Imprimir Préstamo</button>
+
+      <% end %>
+      <%= link_to 'Regresar', prestamos_path, class: "btn btn-default" %>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+

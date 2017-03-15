@@ -1,19 +1,155 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Vehiculo placa:</strong>
-  <%= @orden_mantenimiento.vehiculo_placa %>
-</p>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @orden_mantenimiento.tipo %>
-</p>
+<div class="printable">
 
-<p>
-  <strong>Kilometraje:</strong>
-  <%= @orden_mantenimiento.kilometraje %>
-</p>
+  <div class="row">
 
-<%= link_to 'Edit', edit_orden_mantenimiento_path(@orden_mantenimiento) %> |
-<%= link_to 'Back', orden_mantenimientos_path %>
+    <div class="col-md-2">
+
+    </div>
+
+    <div class="col-md-8">
+
+      <div class="panel panel-primary">
+
+        <div class="panel-heading">
+
+          Orden de Mantenimiento Nro. <%= @orden_mantenimiento.id %>
+
+        </div>
+
+        <div class="panel-body">
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Detalles</h4>
+
+            </div>
+
+            <ul class="list-group">
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_mantenimiento.created_at %> </span>
+                <strong>Fecha: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_mantenimiento.tipo %> </span>
+                <strong>Tipo: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <span class="badge"> <%= @orden_mantenimiento.kilometraje %> </span>
+                <strong>Kilometraje: </strong>
+
+              </li>
+
+              <li class="list-group-item">
+
+                <strong>Detalle: </strong> <%=	 @orden_mantenimiento.detalle %>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Vehículo</h4>
+
+            </div>
+
+            <% @vehiculo = Vehiculo.where(:placa => @orden_mantenimiento.vehiculo_placa) %>
+
+            <% @vehiculo.each do |v| %>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.placa %> </span>
+                  <strong>Placa: </strong>
+
+                </li>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.marca %> </span>
+                  <strong>Marca: </strong>
+
+                </li>
+
+                <li class="list-group-item">
+
+                  <span class="badge"> <%= v.modelo %> </span>
+                  <strong>Modelo: </strong>
+
+                </li>
+
+            <% end %>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-body">
+
+              <h4 style="text-align: center">Encargado</h4>
+
+              <p>
+                <strong>Nombres: </strong> <%=	 @orden_mantenimiento.encargado %>
+              </p>
+
+              <p>
+                <strong>Cédula: </strong> <%=	 @orden_mantenimiento.cedula %>
+              </p>
+
+              <p>
+                <strong>Cargo: </strong> <%=	 @orden_mantenimiento.cargo %>
+              </p>
+
+            </div>
+
+            <div class="firma">
+
+
+
+              <h5>&nbsp;</h5>
+              <h5 style="text-align: center">_________________________</h5>
+              <h5 style="text-align: center">Administrador</h5>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="no-printable">
+
+  <button onclick='window.print();return false;' class="btn btn-warning">Imprimir Orden</button>
+  <%= link_to 'Editar', edit_orden_mantenimiento_path(@orden_mantenimiento), class: "btn btn-default" %>
+  <%= link_to 'Regresar', orden_mantenimiento_path, class: "btn btn-default" %>
+
+</div>
+
+
+
+

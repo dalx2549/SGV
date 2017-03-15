@@ -72,7 +72,8 @@
           <div class="form-group">
 
             <label for="user_telephone">Teléfono:</label>
-            <%= f.text_field :telephone, autocomplete: "off", label: "Teléfono", class: "form-control" %>
+            <%= f.number_field :telephone, autocomplete: "off", label: "Teléfono", class: "form-control", 'data-validation' => 'number'
+                 %>
 
           </div>
         </div>
@@ -92,7 +93,7 @@
         <div class="form-group">
 
           <label for="user_charge">Cargo: </label>
-          <%= f.text_field :charge, label: "Cargo", class: "form-control" %>
+          <%= f.text_field :charge, label: "Cargo", class: "form-control", 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
 
         </div>
       </div>
