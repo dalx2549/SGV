@@ -22,36 +22,8 @@
 <div>
 
 
-  <%	 @orden_mantenimientos = OrdenMantenimiento.all.order("vehiculo_placa desc")%>
-
-  <%	 @orden_mantenimientos.each do |orden|%>
 
 
 
-      <% @vehiculos= Vehiculo.where("placa = ?  AND kilometraje >= ?",orden.vehiculo_placa, orden.kilometraje + 3000) %>
-
-
-
-
-
-   <%	 end %>
-
-  <%	 if @vehiculos.exists? %>
-
-      <%	 @vehiculos.each do |veh| %>
-
-
-
-
-          <%=	 veh.placa %> <%=	 veh.kilometraje %>
-
-
-      <%	 end %>
-
-   <% else %>
-
-    &nbsp;
-
-  <%	 end %>
 
 </div>
