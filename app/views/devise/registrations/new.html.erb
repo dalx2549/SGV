@@ -41,7 +41,7 @@
             <label for="user_cedula">Cédula: </label>
 
             <%= f.number_field :cedula, autocomplete: "off", label: "Cédula", class: "form-control cedula", 'data-validation' => 'length',
-                'data-validation-length' => 'max10'%>
+                'data-validation-length' => 'min10'%>
 
           </div>
 

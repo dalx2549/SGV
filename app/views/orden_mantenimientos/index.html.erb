@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <div class="page-header">
   <h1>Órdenes de Mantenimiento
@@ -7,7 +6,7 @@
 </div>
 
 
-<table id="tabla-ordenes-mantenimiento" class="display" width="100%">
+<table id="tabla-ordenes-mantenimiento" class="table table-striped" width="100%">
   <thead>
   <tr>
     <th>Vehiculo placa</th>
@@ -29,7 +28,7 @@
         <td><%= orden_mantenimiento.cedula %></td>
         <td>
 
-          <div class="btn-group btn-group-sm" role="group" aria-label="...">
+          <div class="btn-group btn-group-sm no-printable" role="group" aria-label="...">
             <%= link_to raw('<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>'), orden_mantenimiento, class: "btn btn-default", title: "Mostrar Detalles" %>
             <%= link_to raw('<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'), edit_orden_mantenimiento_path(orden_mantenimiento), class: "btn btn-warning", title: "Editar" %>
             <%= link_to raw('<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'), orden_mantenimiento, method: :delete, data: {confirm: '¿Estás Seguro?'}, class: "btn btn-danger", title: "Eliminar" %></td>
@@ -42,6 +41,7 @@
 <br>
 
 <%= link_to 'Nueva Orden Mantenimiento', new_orden_mantenimiento_path, class: "btn btn-default" %>
+<button onclick='window.print();return false;' class="btn btn-warning"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
 
 <script>
 
@@ -52,7 +52,21 @@
   $(document).ready(function () {
     $('#tabla-ordenes-mantenimiento').DataTable({
 
-      "language": {
+
+      dom: 'Bfrtip',
+          buttons: [{
+
+            extend: 'print',
+            title: 'Órdenes de Mantenimiento',
+            text: 'Imprimir Historial'
+
+          }
+
+
+    ],
+
+
+    "language": {
         "sProcessing":     "Procesando...",
         "sLengthMenu":     "Mostrar _MENU_ registros",
         "sZeroRecords":    "No se encontraron resultados",

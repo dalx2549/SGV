@@ -4,7 +4,7 @@
   <h1>Prestamos <small>Lista</small></h1>
 </div>
 
-<table id="tabla-prestamo" class="display" width="100%">
+<table id="tabla-prestamo" class="table table-striped" width="100%">
   <thead>
   <tr>
     <th>Fecha Entrega</th>
@@ -48,9 +48,10 @@
 
         </td>
 
-        <td>
+        <td class="no-printable">
 
-          <div class="btn-group btn-group-sm" role="group" aria-label="...">
+
+          <div class="btn-group btn-group-sm no-printable" role="group" aria-label="...">
 
             <%= link_to raw('<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>'), prestamo, class: "btn btn-default", title: 'Mostrar Detalles' %>
 
@@ -61,26 +62,31 @@
 
                 <%	 if prestamo.chofer == true %>
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" title="Añadir Conductor"> <span class="glyphicon glyphicon-user"></span> </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".<%= prestamo.id %>" title="Añadir Conductor"> <span class="glyphicon glyphicon-user"></span> </button>
 
-                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal fade bs-example-modal-lg <%= prestamo.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                       <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
+
+
 
                           <%= bootstrap_form_for(prestamo, url: prestamo_path(prestamo.id)) do |g| %>
 
                               <div class="field">
 
-                                <%= g.collection_select :chofer_cedula, Chofer.all, :cedula, :nombres, :prompt => "Seleccione un conductor"
+                                <%= g.select :chofer_cedula,
+                                             Chofer.all.map{|c| ["#{c.nombres}, #{c.apellidos}", c.cedula] }, { :prompt => "Seleccione conductor deseado", label: "Conductor" }
                                 %>
 
                               </div>
 
                               <div class="actions">
-                                <%= g.submit %>
+                                <%= g.submit "Agregar conductor"%>
                               </div>
 
                           <% end %>
+
+
 
                         </div>
                       </div>

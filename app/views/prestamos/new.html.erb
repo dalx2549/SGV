@@ -12,34 +12,50 @@
 
   <div class="col-md-4">
 
-    <div id="calendar"></div>
+    <div class="panel panel-default">
 
-    <% @prestamos = Prestamo.where(:approved => true) %>
-    <% @vehiculos = Vehiculo.all %>
+      <div class="panel-heading">
 
-    <script>
+        <h3 style="text-align: center ">Calendario de Reservas</h3>
 
-      $('#calendar').fullCalendar({
+      </div>
 
-        lang: "es",
+      <div class="panel-body">
 
-        events:[
+        <div id="calendar"></div>
 
-            <% @prestamos.each do |event| %>{
+        <% @prestamos = Prestamo.where(:approved => true) %>
+        <% @vehiculos = Vehiculo.all %>
 
-            <% actual = @vehiculos.find_by(:placa => event.vehiculo_placa) %>
+        <script>
 
-            title : "<%= event.vehiculo_placa %>  <%= actual.marca %>  <%= actual.modelo %>",
-            start : "<%= event.fechaEntrega.strftime '%Y-%m-%d' %>",
-            end : "<%= event.fechaDevolucion.strftime '%Y-%m-%d' %>"
+          $('#calendar').fullCalendar({
 
-          },
-            <% end %>
-        ],
+            lang: "es",
 
-      });
+            events:[
 
-    </script>
+                <% @prestamos.each do |event| %>{
+
+                <% actual = @vehiculos.find_by(:placa => event.vehiculo_placa) %>
+
+                title : "<%= event.vehiculo_placa %>  <%= actual.marca %>  <%= actual.modelo %>",
+                start : "<%= event.fechaEntrega.strftime '%Y-%m-%d' %>",
+                end : "<%= event.fechaDevolucion.strftime '%Y-%m-%d' %>"
+
+              },
+              <% end %>
+            ],
+
+          });
+
+        </script>
+
+      </div>
+
+    </div>
+
+
 
   </div>
 

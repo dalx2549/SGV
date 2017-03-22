@@ -30,7 +30,7 @@ class OrdenMantenimientosController < ApplicationController
 
     respond_to do |format|
       if @orden_mantenimiento.save
-        format.html { redirect_to @orden_mantenimiento, notice: 'Orden mantenimiento was successfully created.' }
+        format.html { redirect_to @orden_mantenimiento, notice: 'Orden creada satisfactoriamente.' }
         format.json { render :show, status: :created, location: @orden_mantenimiento }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class OrdenMantenimientosController < ApplicationController
   def update
     respond_to do |format|
       if @orden_mantenimiento.update(orden_mantenimiento_params)
-        format.html { redirect_to @orden_mantenimiento, notice: 'Orden mantenimiento was successfully updated.' }
+        format.html { redirect_to @orden_mantenimiento, notice: 'Orden actualizada.' }
         format.json { render :show, status: :ok, location: @orden_mantenimiento }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class OrdenMantenimientosController < ApplicationController
   def destroy
     @orden_mantenimiento.destroy
     respond_to do |format|
-      format.html { redirect_to orden_mantenimientos_url, notice: 'Orden mantenimiento was successfully destroyed.' }
+      format.html { redirect_to orden_mantenimientos_url, notice: 'Orden eliminada.' }
       format.json { head :no_content }
     end
   end

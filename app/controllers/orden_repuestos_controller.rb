@@ -4,8 +4,19 @@ class OrdenRepuestosController < ApplicationController
   # GET /orden_repuestos
   # GET /orden_repuestos.json
   def index
-    @orden_repuestos = OrdenRepuesto.all
-    @history_repuestos = OrdenRepuesto.all
+
+    if admin_signed_in?
+
+      @orden_repuestos = OrdenRepuesto.all
+      @history_repuestos = OrdenRepuesto.all
+
+    else
+
+      redirect_to new_admin_session_path
+
+    end
+
+
   end
 
   # GET /orden_repuestos/1
@@ -29,7 +40,7 @@ class OrdenRepuestosController < ApplicationController
 
     respond_to do |format|
       if @orden_repuesto.save
-        format.html { redirect_to @orden_repuesto, notice: 'Orden repuesto was successfully created.' }
+        format.html { redirect_to @orden_repuesto, notice: 'Orden creada satisfactoriamente.' }
         format.json { render :show, status: :created, location: @orden_repuesto }
       else
         format.html { render :new }
@@ -43,7 +54,7 @@ class OrdenRepuestosController < ApplicationController
   def update
     respond_to do |format|
       if @orden_repuesto.update(orden_repuesto_params)
-        format.html { redirect_to @orden_repuesto, notice: 'Orden repuesto was successfully updated.' }
+        format.html { redirect_to @orden_repuesto, notice: 'Orden actualizada.' }
         format.json { render :show, status: :ok, location: @orden_repuesto }
       else
         format.html { render :edit }
@@ -57,7 +68,7 @@ class OrdenRepuestosController < ApplicationController
   def destroy
     @orden_repuesto.destroy
     respond_to do |format|
-      format.html { redirect_to orden_repuestos_url, notice: 'Orden repuesto was successfully destroyed.' }
+      format.html { redirect_to orden_repuestos_url, notice: 'Orden eliminada.' }
       format.json { head :no_content }
     end
   end

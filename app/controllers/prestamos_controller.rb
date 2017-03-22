@@ -24,6 +24,10 @@ class PrestamosController < ApplicationController
 
       @prestamos = Prestamo.where(user_cedula: current_user.id)
 
+    else
+
+      redirect_to new_user_session_path
+      flash[:success] = "Necesitas iniciar sesión"
 
     end
   end

@@ -14,7 +14,7 @@
 
 <div class="alert alert-warning" role="alert">
 
-  <%	 @prestamos = Prestamo.all %>
+  <%	 @prestamos = Prestamo.where(:approved => true) %>
   <%=	 @prestamos.where(:fechaDevolucion => Date.today).count  %> <strong>&nbsp; Prestamo(s) finalizan hoy.</strong>
 
 </div>

@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Órdenes de Repuestos</h1>
+<div class="page-header">
+  <h1>Órdenes de Repuesto
+    <small>Lista</small>
+  </h1>
+</div>
 
 
-<table id="tabla-repuestos" class="display" width="100%">
+<table id="tabla-repuestos" class="table table-striped" width="100%">
   <thead>
   <tr>
     <th>Fecha</th>
@@ -50,6 +53,18 @@
 
   $(document).ready(function () {
     $('#tabla-repuestos').DataTable({
+
+      dom: 'Bfrtip',
+      buttons: [{
+
+        extend: 'print',
+        title: 'Órdenes de Repuesto',
+        text: 'Imprimir Historial'
+
+      }
+
+
+      ],
 
       "language": {
         "sProcessing":     "Procesando...",

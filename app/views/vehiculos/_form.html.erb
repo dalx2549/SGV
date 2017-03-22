@@ -166,7 +166,10 @@
 
       <div class="form-group">
         <label for="vehiculo_avatars">Imágenes: </label>
-        <%= f.file_field :avatars, multiple: true, 'data-validation' => 'mime', 'data-validation-allowing' => 'jpg, png, gif' %>
+        <%= f.file_field :avatars, multiple: true, 'data-validation' => 'length mime',
+                         'data-validation-allowing' => 'jpg, png, gif',
+                         'data-validation-length' => 'max5',
+                         'data-validation-error-msg' => 'Solo se puede subir máximo 5 imágenes' %>
       </div>
 
       <div class="actions">

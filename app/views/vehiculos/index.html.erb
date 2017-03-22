@@ -5,7 +5,7 @@
 
 
 
-<table id="tabla-vehiculos" class="display" width="100%">
+<table id="tabla-vehiculos" class="table table-striped" width="100%">
   <thead>
     <tr>
 
@@ -17,7 +17,7 @@
       <th>Kilometraje</th>
       <th>Cap. Pasajeros</th>
       <th>Observaciones</th>
-      <th></th>
+      <th class="no-printable"></th>
     </tr>
   </thead>
 
@@ -45,7 +45,7 @@
 
             <div class="modal fade <%= vehiculo.nro_chasis %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
               <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
+                <div class="modal-content no-printable">
 
                   <%= bootstrap_form_for(vehiculo, url: vehiculo_path(vehiculo.id)) do |g| %>
 
@@ -98,6 +98,7 @@
 
   $(document).ready(function() {
     $('#tabla-vehiculos').DataTable({
+
 
       "language": {
         "sProcessing":     "Procesando...",

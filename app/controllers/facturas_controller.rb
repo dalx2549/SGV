@@ -1,4 +1,5 @@
 class FacturasController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_factura, only: [:show, :edit, :update, :destroy]
 
   # GET /facturas
@@ -17,6 +18,8 @@ class FacturasController < ApplicationController
     @factura = Factura.new
   end
 
+
+
   # GET /facturas/1/edit
   def edit
   end
@@ -26,9 +29,11 @@ class FacturasController < ApplicationController
   def create
     @factura = Factura.new(factura_params)
 
+
+
     respond_to do |format|
       if @factura.save
-        format.html { redirect_to @factura, notice: 'Factura was successfully created.' }
+        format.html { redirect_to @factura, notice: 'Factura creada satisfactoriamente.' }
         format.json { render :show, status: :created, location: @factura }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class FacturasController < ApplicationController
   def update
     respond_to do |format|
       if @factura.update(factura_params)
-        format.html { redirect_to @factura, notice: 'Factura was successfully updated.' }
+        format.html { redirect_to @factura, notice: 'Factura Actualizada.' }
         format.json { render :show, status: :ok, location: @factura }
       else
         format.html { render :edit }
@@ -56,7 +61,7 @@ class FacturasController < ApplicationController
   def destroy
     @factura.destroy
     respond_to do |format|
-      format.html { redirect_to facturas_url, notice: 'Factura was successfully destroyed.' }
+      format.html { redirect_to facturas_url, notice: 'Factura eliminada correctamente.' }
       format.json { head :no_content }
     end
   end

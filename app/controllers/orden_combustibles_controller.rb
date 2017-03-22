@@ -34,7 +34,7 @@ class OrdenCombustiblesController < ApplicationController
 
     respond_to do |format|
       if @orden_combustible.save
-        format.html { redirect_to @orden_combustible, notice: 'Orden combustible was successfully created.' }
+        format.html { redirect_to @orden_combustible, notice: 'Orden creada satisfactoriamente.' }
         format.json { render :show, status: :created, location: @orden_combustible }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class OrdenCombustiblesController < ApplicationController
   def update
     respond_to do |format|
       if @orden_combustible.update(orden_combustible_params)
-        format.html { redirect_to @orden_combustible, notice: 'Orden combustible was successfully updated.' }
+        format.html { redirect_to @orden_combustible, notice: 'Orden Actualizada.' }
         format.json { render :show, status: :ok, location: @orden_combustible }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class OrdenCombustiblesController < ApplicationController
   def destroy
     @orden_combustible.destroy
     respond_to do |format|
-      format.html { redirect_to orden_combustibles_url, notice: 'Orden combustible was successfully destroyed.' }
+      format.html { redirect_to orden_combustibles_url, notice: 'Orden eliminada.' }
       format.json { head :no_content }
     end
   end

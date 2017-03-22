@@ -1,8 +1,6 @@
 <%= bootstrap_form_for(chofer) do |f| %>
     <% if chofer.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(chofer.errors.count, "error") %> prohibited this chofer from being saved:</h2>
-
           <ul>
             <% chofer.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
@@ -17,11 +15,11 @@
     </div>
 
     <div class="field">
-      <%= f.text_field :nombres, 'data-validation' => 'alphanumeric' %>
+      <%= f.text_field :nombres, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
     </div>
 
     <div class="field">
-      <%= f.text_field :apellidos, 'data-validation' => 'alphanumeric' %>
+      <%= f.text_field :apellidos, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
     </div>
 
     <div class="field">

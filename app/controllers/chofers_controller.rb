@@ -29,7 +29,7 @@ class ChofersController < ApplicationController
 
     respond_to do |format|
       if @chofer.save
-        format.html { redirect_to @chofer, notice: 'Chofer was successfully created.' }
+        format.html { redirect_to @chofer, notice: 'Conductor guardado correctamente.' }
         format.json { render :show, status: :created, location: @chofer }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ChofersController < ApplicationController
   def update
     respond_to do |format|
       if @chofer.update(chofer_params)
-        format.html { redirect_to @chofer, notice: 'Chofer was successfully updated.' }
+        format.html { redirect_to @chofer, notice: 'Conductor ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @chofer }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ChofersController < ApplicationController
   def destroy
     @chofer.destroy
     respond_to do |format|
-      format.html { redirect_to chofers_url, notice: 'Chofer was successfully destroyed.' }
+      format.html { redirect_to chofers_url, notice: 'Conductor Eliminado.' }
       format.json { head :no_content }
     end
   end

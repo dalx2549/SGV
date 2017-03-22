@@ -2,7 +2,7 @@
 
 <h1>Facturas</h1>
 
-<table class="table table-responsive" id="tabla-facturas">
+<table class="table table-striped" id="tabla-facturas">
   <thead>
     <tr>
       <th>Emisor</th>
@@ -24,7 +24,7 @@
         <td><%= factura.id_orden_mantenimiento %></td>
         <td><%= link_to 'Show', factura %></td>
         <td><%= link_to 'Edit', edit_factura_path(factura) %></td>
-        <td><%= link_to 'Destroy', factura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', factura, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
