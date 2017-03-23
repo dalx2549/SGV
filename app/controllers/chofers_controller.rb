@@ -29,6 +29,9 @@ class ChofersController < ApplicationController
 
     respond_to do |format|
       if @chofer.save
+
+        ChoferRegistradoMailer.send_email_chofer(@chofer).deliver
+
         format.html { redirect_to @chofer, notice: 'Conductor guardado correctamente.' }
         format.json { render :show, status: :created, location: @chofer }
       else

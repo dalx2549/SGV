@@ -1,4 +1,6 @@
 class OrdenMantenimientosController < ApplicationController
+
+  before_action :authenticate_admin!
   before_action :set_orden_mantenimiento, only: [:show, :edit, :update, :destroy]
 
   # GET /orden_mantenimientos

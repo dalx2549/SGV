@@ -11,7 +11,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
+
+    @user = User.find(params[:id])
+    UsuarioRechazadoMailer.send_email_usuario_re(@user).deliver
+
     User.find(params[:id]).destroy
+
+
     flash[:success] = "Usuario eliminado"
     redirect_to users_url
   end

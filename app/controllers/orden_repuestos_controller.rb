@@ -1,4 +1,5 @@
 class OrdenRepuestosController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_orden_repuesto, only: [:show, :edit, :update, :destroy]
 
   # GET /orden_repuestos

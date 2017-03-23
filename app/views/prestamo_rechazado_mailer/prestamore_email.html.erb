@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+  <meta content="text/html"; charset="UTF-8" http-equiv='Content-Type'>
+
+</head>
+
+<body>
+
+<h2>Notificación de Prestamo</h2>
+<h3>Sistema de Gestión Vehicular UTPL</h3>
+
+<p>
+  <strong>
+    Estimado <%=	 @user.name %> <%=	 @user.last_name %>
+  </strong>
+</p>
+
+<p>
+
+  El préstamo del vehículo con placa:  <%=	 @prestamo.vehiculo_placa %> ha sido rechazado debido a inconsistencias en la solicitud o problemas en el vehículo.
+
+</p>
+
+<p>Comuníquese con el administrador para mayor información</p>
+
+<p>
+
+  Saludos.
+
+</p>
+
+</body>
+
+</html>

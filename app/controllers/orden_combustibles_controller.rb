@@ -1,6 +1,6 @@
 class OrdenCombustiblesController < ApplicationController
 
-
+  before_action :authenticate_admin!
   before_action :set_orden_combustible, only: [:show, :edit, :update, :destroy]
 
   # GET /orden_combustibles

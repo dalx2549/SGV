@@ -108,6 +108,8 @@ class PrestamosController < ApplicationController
     @prestamo = Prestamo.find(params[:id])
     @prestamo.update_attribute(:rechazado, true)
 
+    email_rechazado
+
     redirect_to prestamos_url
 
   end
@@ -149,6 +151,16 @@ class PrestamosController < ApplicationController
 
     PrestamoAprobadoMailer.send_email(@prestamo, @user).deliver
     flash[:notice] = "Prestamo ha sido aprobado"
+
+  end
+
+  def email_rechazado
+
+    @prestamo = Prestamo.find(params[:id])
+    @user = User.find(@prestamo.user_cedula)
+
+    PrestamoRechazadoMailer.send_email_rechazado(@prestamo, @user).deliver
+    flash[:notice] = "Prestamo rechazado"
 
   end
 
