@@ -7,6 +7,7 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <auth-required>false</auth-required>
+      <introspection-schemas>SGV_development:public</introspection-schemas>
     </data-source>
     <data-source name="Rails SGV: test" uuid="10527fda-08a9-4a74-86ac-15d6d91bd8fb">
       <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
@@ -14,7 +15,9 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>dfmontano</user-name>
+      <introspection-schemas>SGV_test:public</introspection-schemas>
       <resolve-scope>SGV_test:dfmontano,public</resolve-scope>
+      <unqualified-resolve-schemas>SGV_test:dfmontano,public</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

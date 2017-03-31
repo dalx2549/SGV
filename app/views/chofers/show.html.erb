@@ -1,29 +1,58 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Nombres:</strong>
-  <%= @chofer.nombres %>
-</p>
 
-<p>
-  <strong>Apellidos:</strong>
-  <%= @chofer.apellidos %>
-</p>
 
-<p>
-  <strong>Fechanacimiento:</strong>
-  <%= @chofer.fechaNacimiento %>
-</p>
+</div>
 
-<p>
-  <strong>Tipolicencia:</strong>
-  <%= @chofer.tipoLicencia %>
-</p>
 
-<p>
-  <strong>Experiencia:</strong>
-  <%= @chofer.experiencia %>
-</p>
+<div class="panel panel-default">
+
+  <ul class="list-group">
+    <li class="list-group-item">
+
+      <h4 class="list-group-item-heading">Cédula: </h4>
+      <p> <%=	 @chofer.cedula %> </p>
+
+    </li>
+
+    <li class="list-group-item">
+
+      <h4  class="list-group-item-heading">Nombres: </h4>
+      <p> <%=	 @chofer.nombres %> </p>
+
+    </li>
+
+    <li class="list-group-item">
+
+      <h4 class="list-group-item-heading">Apellidos: </h4>
+      <p> <%=	 @chofer.apellidos %> </p>
+
+    </li>
+
+    <li class="list-group-item">
+
+      <h4 class="list-group-item-heading">Fecha de Nacimiento: </h4>
+      <p>  <%=	 @chofer.fechaNacimiento %> </p>
+
+    </li>
+
+    <li class="list-group-item">
+
+      <h4 class="list-group-item-heading">Tipo(s) de Licencia: </h4>
+      <p>  <%=	 @chofer.tipoLicencia %> </p>
+
+    </li>
+
+    <li class="list-group-item">
+
+      <h4 class="list-group-item-heading">Experiencia: </h4>
+      <p> <%=	 @chofer.experiencia %> </p>
+
+    </li>
+
+  </ul>
+
+</div>
 
 <p>
   <strong>Foto:</strong>
@@ -42,5 +71,5 @@
 
 </p>
 
-<%= link_to 'Edit', edit_chofer_path(@chofer) %> |
-<%= link_to 'Back', chofers_path %>
+<%= link_to 'Editar', edit_chofer_path(@chofer), class: "btn btn-default" %> |
+<%= link_to 'Regresar', chofers_path, class: "btn btn-default" %>

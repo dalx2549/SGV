@@ -7,17 +7,20 @@
 
     </div>
 
-    <div class="col-md-8">
+    <div class="col-xs-12 col-sm-6 col-md-8">
 
       <div class="panel panel-primary">
 
         <div class="panel-heading">
 
-          Orden de Combustible Nro. <%= @orden_combustible.id %>
-
+          Orden de Combustible
         </div>
 
         <div class="panel-body">
+
+          <img src="http://www.utpl.edu.ec/manual_imagen/images/institucional/UTPL-INSTITUCIONAL-color.jpg" width="30%" >
+
+          <h3 class="nro-orden">Nro. <%= @orden_combustible.id %></h3>
 
           <div class="panel panel-default">
 
@@ -57,46 +60,40 @@
 
               </li>
 
+              <br>
+              <h4 style="text-align: center">Vehículo</h4>
+
+              <% @vehiculo = Vehiculo.where(:placa => @orden_combustible.vehiculo_placa) %>
+
+              <% @vehiculo.each do |v| %>
+
+                  <li class="list-group-item">
+
+                    <span class="badge"> <%= v.placa %> </span>
+                    <strong>Placa: </strong>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                    <span class="badge"> <%= v.marca %> </span>
+                    <strong>Marca: </strong>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                    <span class="badge"> <%= v.modelo %> </span>
+                    <strong>Modelo: </strong>
+
+                  </li>
+
+              <% end %>
+
             </ul>
 
           </div>
 
-          <div class="panel panel-default">
-
-            <div class="panel-body">
-
-              <h4 style="text-align: center">Vehículo</h4>
-
-            </div>
-
-            <% @vehiculo = Vehiculo.where(:placa => @orden_combustible.vehiculo_placa) %>
-
-            <% @vehiculo.each do |v| %>
-
-                <li class="list-group-item">
-
-                  <span class="badge"> <%= v.placa %> </span>
-                  <strong>Placa: </strong>
-
-                </li>
-
-                <li class="list-group-item">
-
-                  <span class="badge"> <%= v.marca %> </span>
-                  <strong>Marca: </strong>
-
-                </li>
-
-                <li class="list-group-item">
-
-                  <span class="badge"> <%= v.modelo %> </span>
-                  <strong>Modelo: </strong>
-
-                </li>
-
-            <% end %>
-
-          </div>
 
           <div class="panel panel-default">
 

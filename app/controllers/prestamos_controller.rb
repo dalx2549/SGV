@@ -53,19 +53,6 @@ class PrestamosController < ApplicationController
   end
 
 
-  def vehiculo_prestamo
-
-    @prestamo = Prestamo.find(params[:id])
-    @vehiculo =  Vehiculo.where(placa: @prestamo.vehiculo_placa)
-
-    @vehiculo.each do |vehiculo|
-
-      vehiculo.update_attribute(:disponibilidad, false)
-
-    end
-
-  end
-
   # POST /prestamos
   # POST /prestamos.json
   def create
@@ -130,7 +117,7 @@ class PrestamosController < ApplicationController
     tRestante = fecha_futura.to_time - Time.now
 
     placa = @prestamo.vehiculo_placa
-    vehiculo_prestamo
+
 
 
     logger.info tRestante
