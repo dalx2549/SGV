@@ -46,7 +46,8 @@
         <div class="form-group col-md-6">
 
           <label for="vehiculo_marca">Marca: </label>
-          <%= f.text_field :marca, class: "form-control" %>
+          <%= f.text_field :marca, class: "form-control", 'data-validation' => 'custom',
+                           'data-validation-regexp' => '^[A-Z][a-z]+\s[A-Z][a-z]+$' %>
 
         </div>
 
@@ -70,7 +71,8 @@
         <div class="form-group col-md-4">
 
           <label for="vehiculo_color">Color: </label>
-          <%= f.text_field :color, class: "form-control", :maxlength => "15" %>
+          <%= f.text_field :color, class: "form-control", :maxlength => "15", 'data-validation' => 'custom',
+                           'data-validation-regexp' => '^[A-Z][a-z]+$', 'data-validation-error-msg' => 'No es un color válido' %>
 
         </div>
 
@@ -81,7 +83,8 @@
         <div class="form-group col-md-4">
 
           <label for="vehiculo_cilindraje">Cilindraje: </label>
-          <%= f.text_field :cilindraje, class: "form-control", :maxlength => "5" %>
+          <%= f.text_field :cilindraje, class: "form-control", :maxlength => "5",
+                           'data-validation' => 'number', 'data-validation-allowing' => 'range[100;20000]' %>
 
         </div>
 

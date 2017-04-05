@@ -19,7 +19,7 @@
           <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> caracteres mínimo)</em>
           <% end %><br/>
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", 'data-validation' => 'length alphanumeric', 'data-validation-length' => 'min6' %>
 
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="form-group">
 
           <label for="user_password_confirmation">Confirme contraseña: </label>
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", 'data-validation' => 'length alphanumeric', 'data-validation-length' => 'min6' %>
 
         </div>
       </div>
@@ -41,7 +41,7 @@
             <label for="user_cedula">Cédula: </label>
 
             <%= f.number_field :cedula, autocomplete: "off", label: "Cédula", class: "form-control cedula", 'data-validation' => 'length',
-                'data-validation-length' => 'min10'%>
+                'data-validation-length' => 'min10', 'data-validation-error-msg' => 'Su número de identificación debe tener al menos 10 números'%>
 
           </div>
 

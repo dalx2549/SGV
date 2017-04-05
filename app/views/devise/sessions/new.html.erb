@@ -1,3 +1,20 @@
+<script>
+
+    $(document).ready(function() {
+
+        var url = window.location.pathname;
+        console.log(url);
+
+        if (url == '/admins/sign_in'){
+
+            document.getElementById("link-admin").remove();
+
+        };
+
+    });
+
+</script>
+
 <div class="jumbotron">
 
   <h3>Iniciar sesión</h3>
@@ -31,5 +48,9 @@
 
 
 </div>
+
+
+
+
 
 

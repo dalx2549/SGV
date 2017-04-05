@@ -22,8 +22,28 @@
 en:
   hello: "Hello world"
 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "ya se encuentra registrado."
+            cedula:
+              taken: "ya se encuentra registrada."
+        prestamo:
+          attributes:
+            fechaEntrega:
+              taken: "ya se encuentra ocupada."
+            vehiculo_placa:
+              taken: "ya se encuentra ocupada"
+        vehiculo:
+          attributes:
+            placa: "ya se encuentra registrada."
+
+
   errors:
     messages:
         not_saved:
-            one: "1 error ha impedido %{resource} de ser guardado:"
-            other: "%{count} errores impiden  %{resource} de ser guardado:"
+            one: ""
+            other: ""
