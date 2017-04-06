@@ -141,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+              <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -815,7 +815,7 @@
       <workItem from="1491193818785" duration="1235000" />
       <workItem from="1491275208812" duration="3950000" />
       <workItem from="1491418757480" duration="2023000" />
-      <workItem from="1491422150431" duration="2295000" />
+      <workItem from="1491422150431" duration="2673000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to several controllers">
       <created>1487112752005</created>
@@ -964,11 +964,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491455097489</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Modify mailer config">
+      <created>1491455188222</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1491455188222</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371429000" />
+    <option name="totallyTimeSpent" value="371807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1794,7 +1801,7 @@
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
           <folding />
         </state>
       </provider>
