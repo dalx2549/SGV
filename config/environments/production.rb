@@ -56,7 +56,7 @@
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "SGV_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options =   { :host => request.host_with_port }
+  config.action_mailer.default_url_options =   { :host => 'gestionvehicular.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address: 'smtp.gmail.com',
