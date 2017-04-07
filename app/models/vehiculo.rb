@@ -29,10 +29,10 @@ class Vehiculo < ApplicationRecord
 
   validates :anio, numericality: { only_integer: true, :less_than_or_equal_to => 2050 }
 
-  validate :valid_km
-
 
   validates_format_of :placa, :with => /^[A-Z][A-Z][A-Z][-][0-9]{4}$/, :multiline => true
+
+  validate :valid_km, :on => :edit
 
   def valid_km
 
