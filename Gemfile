@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#Date Validator
+gem 'date_validator'
 #Media Queries to responsive views
 gem 'sass-mediaqueries-rails'
 #Bootstrap glyphicons

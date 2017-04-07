@@ -18,6 +18,7 @@ class Prestamo < ApplicationRecord
 
   validates_uniqueness_of :fechaEntrega, scope: [:vehiculo_placa, :approved]
 
+  validates :fechaDevolucion, date: { after_or_equal_to: :fechaEntrega, message: 'Debe ser posterior a la fecha de entrega'}
 
 
 end
