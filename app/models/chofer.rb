@@ -1,6 +1,6 @@
 class Chofer < ApplicationRecord
 
-  has_many :prestamos
+  has_many :prestamos, :dependent => :delete_all
   accepts_nested_attributes_for :prestamos
   mount_uploader :avatar, AvatarUploader
   mount_uploaders :licencias, LicenciaUploader
