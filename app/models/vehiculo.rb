@@ -29,9 +29,22 @@ class Vehiculo < ApplicationRecord
 
   validates :anio, numericality: { only_integer: true, :less_than_or_equal_to => 2050 }
 
-
+  validate :valid_km
 
 
   validates_format_of :placa, :with => /^[A-Z][A-Z][A-Z][-][0-9]{4}$/, :multiline => true
+
+  def valid_km
+
+    km = Vehiculo.find(self.placa).kilometraje
+
+    if self.kilometraje > km
+      true
+    else
+      errors.add(:kilometraje, "Debe ser mayor")
+      false
+    end
+
+  end
 
 end

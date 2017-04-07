@@ -1,8 +1,6 @@
 <%= bootstrap_form_for(orden_mantenimiento) do |f| %>
   <% if orden_mantenimiento.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(orden_mantenimiento.errors.count, "error") %> prohibited this orden_mantenimiento from being saved:</h2>
-
       <ul>
       <% orden_mantenimiento.errors.full_messages.each do |message| %>
         <li><%= message %></li>

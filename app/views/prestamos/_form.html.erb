@@ -16,7 +16,7 @@
     </div>
 
     <div class="field">
-      <%= f.date_select :fechaDevolucion, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'], label: "Fecha de devolución" %>
+      <%= f.date_select :fechaDevolucion, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'],selected: Date.today, min: Date.today, max: 1.year.from_now, label: "Fecha de devolución" %>
     </div>
 
     <div class="field">

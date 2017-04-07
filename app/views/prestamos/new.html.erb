@@ -39,7 +39,7 @@
 
                 <% actual = @vehiculos.find_by(:placa => event.vehiculo_placa) %>
 
-                title : "<%= event.vehiculo_placa %>  <%= actual.marca %>  <%= actual.modelo %>",
+                title : "<%= actual.marca %>  <%= actual.modelo %> <%= event.vehiculo_placa %>",
                 start : "<%= event.fechaEntrega.strftime '%Y-%m-%d' %>",
                 end : "<%= event.fechaDevolucion.strftime '%Y-%m-%d' %>"
 
