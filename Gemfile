@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'jquery-datatables-rails', '~> 3.4.0'
+
+#Chosen rails for interactive dropdowns
+gem 'chosen-rails'
+#Bootstrap chosen jquery plugin
+gem 'bootstrap-chosen-rails'
 #Date Validator
 gem 'date_validator'
 #Media Queries to responsive views
@@ -37,8 +43,6 @@ gem 'bootstrap_form'
 gem 'validates_email_format_of'
 #Search gem
 gem 'ransack'
-#ChosenRails gem
-gem 'chosen-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 

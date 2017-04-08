@@ -1,9 +1,5 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
 $(document).ready ->
-  $('#tabla-vehiculos').DataTable 'language':
+  $('#tabla-usuarios').DataTable 'language':
     'sProcessing': 'Procesando...'
     'sLengthMenu': 'Mostrar _MENU_ registros'
     'sZeroRecords': 'No se encontraron resultados'
