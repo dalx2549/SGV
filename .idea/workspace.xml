@@ -7,46 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc1cc6d2-8aa4-435d-a1a8-470af524cebe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/chofers.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/chofers.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/facturas.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/facturas.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/orden_combustibles.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/orden_combustibles.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/prestamos.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/prestamos.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/vehiculos.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/vehiculos.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orden_combustibles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orden_combustibles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orden_mantenimientos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orden_mantenimientos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orden_repuestos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orden_repuestos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/orden_combustible.rb" afterPath="$PROJECT_DIR$/app/models/orden_combustible.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/orden_repuesto.rb" afterPath="$PROJECT_DIR$/app/models/orden_repuesto.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/vehiculo.rb" afterPath="$PROJECT_DIR$/app/models/vehiculo.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chofer_registrado_mailer/chofer_email.html.erb" afterPath="$PROJECT_DIR$/app/views/chofer_registrado_mailer/chofer_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chofers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/chofers/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chofers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/chofers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/facturas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/facturas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notificaciones/_notificaciones.html.erb" afterPath="$PROJECT_DIR$/app/views/notificaciones/_notificaciones.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_combustibles/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_combustibles/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_mantenimientos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_mantenimientos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_repuestos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_repuestos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamo_aprobado_mailer/prestamoa_email.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamo_aprobado_mailer/prestamoa_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamo_rechazado_mailer/prestamore_email.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamo_rechazado_mailer/prestamore_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamos/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamos/show.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamos/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/usuario_aprobado_mailer/usuarioa_email.html.erb" afterPath="$PROJECT_DIR$/app/views/usuario_aprobado_mailer/usuarioa_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/usuario_rechazado_mailer/usuarior_email.html.erb" afterPath="$PROJECT_DIR$/app/views/usuario_rechazado_mailer/usuarior_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/show.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="SGV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1295,7 +1255,7 @@
       <workItem from="1491580937339" duration="2959000" />
       <workItem from="1491599772264" duration="234000" />
       <workItem from="1491626393478" duration="4142000" />
-      <workItem from="1491670835807" duration="21184000" />
+      <workItem from="1491670835807" duration="21354000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to several controllers">
       <created>1487112752005</created>
@@ -1493,11 +1453,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491684099054</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Repair errors, modify datatables">
+      <created>1491710322695</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1491710322695</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411187000" />
+    <option name="totallyTimeSpent" value="411357000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1608,7 +1575,8 @@
     <MESSAGE value="Add custom validators" />
     <MESSAGE value="Add date validators" />
     <MESSAGE value="Modify datatables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify datatables" />
+    <MESSAGE value="Repair errors, modify datatables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repair errors, modify datatables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
