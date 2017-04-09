@@ -1,6 +1,6 @@
 class UsuarioAprobadoMailer < ApplicationMailer
 
-  default from: "codeideas.loja@gmail.com"
+  default from: "gestionvehicularutpl@gmail.com"
 
   def send_email_usuario(persona)
 
