@@ -15,11 +15,11 @@
     </div>
 
     <div class="field">
-      <%= f.text_field :nombres, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
+      <%= f.text_field :nombres, 'data-validation' => 'custom', 'data-validation-regexp' => '([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*' %>
     </div>
 
     <div class="field">
-      <%= f.text_field :apellidos, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
+      <%= f.text_field :apellidos, 'data-validation' => 'custom', 'data-validation-regexp' => '([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*' %>
     </div>
 
     <div class="field">

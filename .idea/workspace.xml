@@ -7,10 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dc1cc6d2-8aa4-435d-a1a8-470af524cebe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chofers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/chofers/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamos/show.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamos/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb" />
     </list>
     <ignored path="SGV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,21 +109,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="55" column="170" lean-forward="false" selection-start-line="55" selection-start-column="170" selection-end-line="55" selection-end-column="170" />
+            <state relative-caret-position="259">
+              <caret line="42" column="148" lean-forward="false" selection-start-line="42" selection-start-column="148" selection-end-line="42" selection-end-column="148" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/prestamos/show.html.erb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="208">
+              <caret line="40" column="133" lean-forward="false" selection-start-line="40" selection-start-column="133" selection-end-line="40" selection-end-column="133" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="29" column="88" lean-forward="false" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/chofers/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-776">
+              <caret line="21" column="133" lean-forward="false" selection-start-line="21" selection-start-column="133" selection-end-line="21" selection-end-column="133" />
               <folding />
             </state>
           </provider>
@@ -191,13 +212,10 @@
         <option value="$PROJECT_DIR$/app/views/orden_mantenimientos/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orden_repuestos/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/orden_mantenimientos_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/orden_combustibles_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/orden_repuestos_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/orden_combustible.rb" />
         <option value="$PROJECT_DIR$/app/models/orden_repuesto.rb" />
-        <option value="$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vehiculos/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/usuario_aprobado_mailer/usuarioa_email.html.erb" />
         <option value="$PROJECT_DIR$/app/views/chofer_registrado_mailer/chofer_email.html.erb" />
@@ -209,13 +227,16 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/chofers/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/prestamo_aprobado_mailer/prestamoa_email.html.erb" />
         <option value="$PROJECT_DIR$/app/models/vehiculo.rb" />
         <option value="$PROJECT_DIR$/app/views/vehiculos/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/prestamos/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/chofers/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -513,28 +534,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prestamos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="prestamo_rechazado_mailer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -558,6 +557,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="prestamo_aprobado_mailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SGV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SGV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orden_repuestos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SGV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SGV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orden_mantenimientos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1213,7 +1256,7 @@
       <workItem from="1491599772264" duration="234000" />
       <workItem from="1491626393478" duration="4142000" />
       <workItem from="1491670835807" duration="21766000" />
-      <workItem from="1491750911506" duration="1218000" />
+      <workItem from="1491750911506" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to several controllers">
       <created>1487112752005</created>
@@ -1432,11 +1475,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491710832535</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="repair views">
+      <created>1491752433228</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1491752433229</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412987000" />
+    <option name="totallyTimeSpent" value="413670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1549,7 +1599,8 @@
     <MESSAGE value="Modify datatables" />
     <MESSAGE value="Repair errors, modify datatables" />
     <MESSAGE value="Add migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add migrations" />
+    <MESSAGE value="repair views" />
+    <option name="LAST_COMMIT_MESSAGE" value="repair views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1676,13 +1727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orden_combustibles/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orden_mantenimientos/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1701,6 +1745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="77" column="173" lean-forward="false" selection-start-line="77" selection-start-column="173" selection-end-line="77" selection-end-column="173" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1711,24 +1756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/orden_mantenimientos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="75" column="133" lean-forward="false" selection-start-line="75" selection-start-column="133" selection-end-line="75" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1751,13 +1782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="42" column="49" lean-forward="false" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1808,13 +1832,6 @@
         <state relative-caret-position="-221">
           <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chofers/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="105" column="4" lean-forward="false" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1874,14 +1891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/prestamo_rechazado_mailer/prestamore_email.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vehiculos/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1914,18 +1923,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="55" column="170" lean-forward="false" selection-start-line="55" selection-start-column="170" selection-end-line="55" selection-end-column="170" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/prestamos/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orden_combustibles/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/prestamo_rechazado_mailer/prestamore_email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orden_combustibles/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="42" column="148" lean-forward="false" selection-start-line="42" selection-start-column="148" selection-end-line="42" selection-end-column="148" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orden_mantenimientos/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="40" column="133" lean-forward="false" selection-start-line="40" selection-start-column="133" selection-end-line="40" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orden_repuestos/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="29" column="88" lean-forward="false" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/chofers/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-776">
+          <caret line="21" column="133" lean-forward="false" selection-start-line="21" selection-start-column="133" selection-end-line="21" selection-end-column="133" />
           <folding />
         </state>
       </provider>

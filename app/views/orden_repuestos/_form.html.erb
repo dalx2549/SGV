@@ -27,7 +27,7 @@
   <div class="field">
 
     <%= f.text_field :encargado, 'data-validation' => 'custom',
-                     'data-validation-regexp' => '/^([A-Z][a-záéíóú]+)( [a-z]{1,3})*( [A-Z][a-záéíóú]+)?$/' %>
+                     'data-validation-regexp' => '([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*' %>
   </div>
 
   <div class="field">
