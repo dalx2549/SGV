@@ -75,6 +75,6 @@ class OrdenCombustiblesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def orden_combustible_params
-    params.require(:orden_combustible).permit(:id, :estacionServicio, :vehiculo_placa, :fechaEmision, :tipoCombustible, :valorCompra, :persona, :cedula, :cargo)
+    params.require(:orden_combustible).permit(:id, :estacionServicio, :vehiculo_placa, :fechaEmision, :tipoCombustible, :valorCompra, :persona, :cedula, :cargo, :kilometraje)
   end
 end

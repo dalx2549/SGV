@@ -1,13 +1,4 @@
 <%= bootstrap_form_for(prestamo) do |f| %>
-    <% if prestamo.errors.any? %>
-        <div id="error_explanation">
-          <ul>
-            <% prestamo.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
 
     <div class="field">
       <%= f.date_select :fechaEntrega, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'], label: "Fecha de inicio" %>

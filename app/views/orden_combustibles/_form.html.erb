@@ -23,7 +23,7 @@
   </div>
 
   <div class="field">
-    <%= f.date_select :fechaEmision, label:"Fecha de emisión:", :start_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
+    <%= f.date_select :fechaEmision, label:"Fecha:", :start_year => 2015, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
   </div>
 
   <div class="field">
@@ -36,7 +36,11 @@
   </div>
 
   <div class="field">
-    <%= f.text_field :persona, 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*'  %>
+    <%=	 f.text_field :kilometraje, label: "Kilometraje", :maxlength => "6", 'data-validation' => 'number' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :persona,label: "Encargado", 'data-validation' => 'custom', 'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*'  %>
   </div>
 
   <div class="field">

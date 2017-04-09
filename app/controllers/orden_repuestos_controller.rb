@@ -82,6 +82,6 @@ class OrdenRepuestosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def orden_repuesto_params
-      params.require(:orden_repuesto).permit(:fecha, :encargado, :proveedor, :observaciones, :vehiculo_placa, :detalle, :avatar, :cedula, :cargo)
+      params.require(:orden_repuesto).permit(:fecha, :encargado, :proveedor, :observaciones, :vehiculo_placa, :detalle, :avatar, :cedula, :cargo, :kilometraje)
     end
 end

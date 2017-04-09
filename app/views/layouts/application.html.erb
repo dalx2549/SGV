@@ -14,14 +14,14 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.bootstrap.min.css">
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.bootstrap.min.js"></script>
   <script src="//cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+  <meta name="turbolinks-cache-control" content="no-cache">
 </head>
 
 <header>
@@ -199,12 +199,25 @@
 
         </td>
 
-        <td style="width: 30%">
+        <td style="width: 25%">
 
           <p class="text-footer">Contactos:</p>
           <p class="text-footer">1 800 8875 88</p>
           <p class="text-footer"><a href="http://utpl.edu.ec/buzon/">Buzón de Consultas</a></p>
 
+        </td>
+
+        <td style="width: 5%">
+          <% if admin_signed_in? %>
+
+
+          <% elsif user_signed_in? %>
+
+          <% else %>
+
+              <%= link_to raw('<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>'), new_admin_session_path, class: "admin" %>
+
+          <% end %>
         </td>
 
       </tr>
@@ -215,4 +228,8 @@
 
 </footer>
 
+
+
 </html>
+
+

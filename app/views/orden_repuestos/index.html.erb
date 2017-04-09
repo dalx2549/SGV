@@ -9,6 +9,7 @@
 <table id="tabla-repuestos" class="table table-striped" width="100%">
   <thead>
   <tr>
+    <th>Nro.</th>
     <th>Fecha</th>
     <th>Encargado</th>
     <th>Proveedor</th>
@@ -21,6 +22,7 @@
   <tbody>
   <% @orden_repuestos.each do |orden_repuesto| %>
       <tr>
+        <td><%= orden_repuesto.id %></td>
         <td><%= orden_repuesto.fecha %></td>
         <td><%= orden_repuesto.encargado %></td>
         <td><%= orden_repuesto.proveedor %></td>

@@ -13,15 +13,23 @@
 
 <p>
   <strong>
-    Estimado <%=	 @user.name %> <%=	 @user.last_name %>
+    Estimad@ <%=	 @user.name %> <%=	 @user.last_name %>
   </strong>
 </p>
 
 <p>
 
+  <%	 @vehiculo = Vehiculo.find_by_placa(@prestamo.vehiculo_placa) %>
 
-  El préstamo del vehículo con placa:  <%=	 @prestamo.vehiculo_placa %> ha sido aprobado desde: <%=	 @prestamo.fechaEntrega %>, hasta:
+
+  El préstamo del vehículo <%=	 @vehiculo.marca %> <%=	 @vehiculo.modelo %> con placa:  <%=	 @prestamo.vehiculo_placa %> ha sido aprobado desde: <%=	 @prestamo.fechaEntrega %>, hasta:
   <%=	 @prestamo.fechaDevolucion %>.
+
+</p>
+
+<p>
+
+  Por favor ingresar al sistema e imprima la orden aprobada.
 
 </p>
 

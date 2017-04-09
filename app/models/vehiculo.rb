@@ -32,13 +32,27 @@ class Vehiculo < ApplicationRecord
 
   validates_format_of :placa, :with => /^[A-Z][A-Z][A-Z][-][0-9]{4}$/, :multiline => true
 
-  validate :valid_km, :on => :edit
+  validate :valid_km
+
+  validate :valid_km_create, :on => :create
 
   def valid_km
 
     km = Vehiculo.find(self.placa).kilometraje
 
     if self.kilometraje > km
+      true
+    else
+      errors.add(:kilometraje, "Debe ser mayor")
+      false
+    end
+
+  end
+
+  def valid_km_create
+
+
+    if self.kilometraje > 0
       true
     else
       errors.add(:kilometraje, "Debe ser mayor")

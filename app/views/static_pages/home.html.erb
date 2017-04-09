@@ -66,16 +66,7 @@
 
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Universidad_Técnica_Particular_de_Loja.png/200px-Universidad_Técnica_Particular_de_Loja.png" class="logo" id="logo-inicio">
 
-          <% if admin_signed_in? %>
 
-
-          <% elsif user_signed_in? %>
-
-          <% else %>
-
-              <%= link_to raw('<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>'), new_admin_session_path, class: "admin" %>
-
-          <% end %>
 
 
         </div>
@@ -87,19 +78,7 @@
 
 <% end %>
 
-<% if admin_signed_in? && user_signed_in? %>
 
-<% else %>
-
-    <footer>
-
-
-    </footer>
-
-
-
-
-<% end %>
 
 
 

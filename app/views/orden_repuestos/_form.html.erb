@@ -1,8 +1,6 @@
 <%= bootstrap_form_for(orden_repuesto) do |f| %>
   <% if orden_repuesto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(orden_repuesto.errors.count, "error") %> prohibited this orden_repuesto from being saved:</h2>
-
       <ul>
       <% orden_repuesto.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -22,10 +20,14 @@
     <%= f.date_select :fecha, :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] %>
   </div>
 
+    <div class="field">
+      <%=	 f.text_field :kilometraje, label: "Kilometraje", :maxlength => "6", 'data-validation' => 'number' %>
+    </div>
+
   <div class="field">
 
     <%= f.text_field :encargado, 'data-validation' => 'custom',
-                     'data-validation-regexp' => '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*' %>
+                     'data-validation-regexp' => '/^([A-Z][a-záéíóú]+)( [a-z]{1,3})*( [A-Z][a-záéíóú]+)?$/' %>
   </div>
 
   <div class="field">

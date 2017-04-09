@@ -73,6 +73,6 @@ class OrdenMantenimientosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def orden_mantenimiento_params
-      params.require(:orden_mantenimiento).permit(:vehiculo_placa, :tipo, :kilometraje, :encargado, :cedula, :cargo, :detalle)
+      params.require(:orden_mantenimiento).permit(:vehiculo_placa, :tipo, :kilometraje, :encargado, :cedula, :cargo, :detalle, :fecha)
     end
 end

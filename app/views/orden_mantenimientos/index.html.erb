@@ -9,6 +9,7 @@
 <table id="tabla-ordenes-mantenimiento" class="table table-striped" width="100%">
   <thead>
   <tr>
+    <th>Nro.</th>
     <th>Vehiculo placa</th>
     <th>Tipo</th>
     <th>Kilometraje</th>
@@ -21,6 +22,7 @@
   <tbody>
   <% @orden_mantenimientos.each do |orden_mantenimiento| %>
       <tr>
+        <td><%= orden_mantenimiento.id %></td>
         <td><%= orden_mantenimiento.vehiculo_placa %></td>
         <td><%= orden_mantenimiento.tipo %></td>
         <td><%= orden_mantenimiento.kilometraje %></td>

@@ -147,7 +147,38 @@
 
         </div>
 
+
       </div>
+
+      <%	 if @prestamo.chofer == true %>
+
+          <div class="panel panel-primary">
+
+            <div class="panel-heading">
+
+              <h4 style="text-align: center">Conductor</h4>
+
+            </div>
+
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+
+                <%	 @chofer = Chofer.find_by_cedula(@prestamo.chofer_cedula) %>
+
+                <p><strong>Nombres: </strong><%=	 @chofer.nombres %></p>
+                <p><strong>Apellidos: </strong><%=	 @chofer.apellidos %></p>
+                <p><strong>Teléfono: </strong><%=	 @chofer.telefono %></p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+    <%	 end %>
 
 
     </div>

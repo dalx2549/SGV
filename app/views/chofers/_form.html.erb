@@ -44,6 +44,8 @@
           <%= f.text_field :tipoLicencia, id: "mytext", label: " Tipo de licencia", :readonly => true %>
         </div>
 
+        <button type="button" onclick="borrar()">Limpiar</button>
+
         <div class="dropdown">
 
           <strong>Seleccione:</strong>
@@ -101,6 +103,12 @@
   mydropdown.onchange = function () {
     mytextbox.value = mytextbox.value + this.value + ", "; //to appened
     mytextbox.innerHTML = this.value;
+  };
+
+  var borrar = function(){
+
+      $('#mytext').val("");
+
   }
 
 </script>
