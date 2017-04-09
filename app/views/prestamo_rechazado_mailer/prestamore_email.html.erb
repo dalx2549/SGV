@@ -19,7 +19,9 @@
 
 <p>
 
-  El préstamo del vehículo con placa:  <%=	 @prestamo.vehiculo_placa %> ha sido rechazado debido a inconsistencias en la solicitud o problemas en el vehículo.
+  <%	 @vehiculo = Vehiculo.find_by_placa(@prestamo.vehiculo_placa) %>
+
+  El préstamo del vehículo <%=	 @vehiculo.marca %> <%=	 @vehiculo.modelo %> con placa:  <%=	 @prestamo.vehiculo_placa %> ha sido rechazado debido a inconsistencias en la solicitud o problemas en el vehículo.
 
 </p>
 
