@@ -40,7 +40,7 @@ class Vehiculo < ApplicationRecord
 
     km = Vehiculo.find(self.placa).kilometraje
 
-    if self.kilometraje > km
+    if self.kilometraje >= km
       true
     else
       errors.add(:kilometraje, "Debe ser mayor")

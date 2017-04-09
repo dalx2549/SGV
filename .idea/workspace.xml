@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc1cc6d2-8aa4-435d-a1a8-470af524cebe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/vehiculo.rb" afterPath="$PROJECT_DIR$/app/models/vehiculo.rb" />
     </list>
     <ignored path="SGV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,8 +161,8 @@
       <file leaf-file-name="vehiculo.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/vehiculo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+            <state relative-caret-position="230">
+              <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1255,7 +1256,7 @@
       <workItem from="1491580937339" duration="2959000" />
       <workItem from="1491599772264" duration="234000" />
       <workItem from="1491626393478" duration="4142000" />
-      <workItem from="1491670835807" duration="21354000" />
+      <workItem from="1491670835807" duration="21544000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to several controllers">
       <created>1487112752005</created>
@@ -1460,11 +1461,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491710322695</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add migrations">
+      <created>1491710516232</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1491710516232</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411357000" />
+    <option name="totallyTimeSpent" value="411547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1576,7 +1584,8 @@
     <MESSAGE value="Add date validators" />
     <MESSAGE value="Modify datatables" />
     <MESSAGE value="Repair errors, modify datatables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repair errors, modify datatables" />
+    <MESSAGE value="Add migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add migrations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1988,8 +1997,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/vehiculo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        <state relative-caret-position="230">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
           <folding />
         </state>
       </provider>
