@@ -14,7 +14,7 @@ class Prestamo < ApplicationRecord
   validates_presence_of :fechaDevolucion
   validates_presence_of :razon
   validates_presence_of :user_cedula
-  validates_presence_of :vehiculo_placa
+  validates_presence_of :vehiculo_placa, :message => "Debe seleccionar un vehículo"
 
   validates_uniqueness_of :fechaEntrega, scope: [:vehiculo_placa, :approved]
 
