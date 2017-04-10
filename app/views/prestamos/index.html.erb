@@ -9,8 +9,8 @@
   <thead>
 
   <tr>
-    <th>Fecha Entrega</th>
-    <th>Fecha Devolución</th>
+    <th>Fecha de Entrega</th>
+    <th>Fecha de Devolución</th>
     <th>Razón</th>
     <th>Persona</th>
     <th>Placa</th>
@@ -27,7 +27,12 @@
         <td><%= prestamo.fechaEntrega %></td>
         <td><%= prestamo.fechaDevolucion %></td>
         <td><%= prestamo.razon %></td>
-        <td><%= prestamo.user_cedula %></td>
+        <td>
+
+          <%	 @user = User.find_by_cedula(prestamo.user_cedula) %>
+          <%=	 @user.name %> <%	 @user.last_name %>
+
+        </td>
         <td><%= prestamo.vehiculo_placa %></td>
 
 

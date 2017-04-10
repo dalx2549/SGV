@@ -31,6 +31,7 @@
               <h4 style="text-align: center">Persona</h4>
 
               <% @user = User.where(:cedula => @prestamo.user_cedula) %>
+              
 
               <% @user.each do |u| %>
 
