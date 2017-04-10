@@ -4,11 +4,12 @@
 <table class="table table-striped" id="tabla-facturas" width="100%">
   <thead>
   <tr>
+    <th>Nro. Factura</th>
     <th>Emisor</th>
-    <th>Numero</th>
-    <th>Id orden combustible</th>
-    <th>Id orden respuesto</th>
-    <th>Id orden mantenimiento</th>
+    <th>Valor</th>
+    <th>Nro. Orden Combustible</th>
+    <th>Nro. Orden Repuesto</th>
+    <th>Nro. Orden Mantenimiento</th>
     <th></th>
   </tr>
   </thead>
@@ -16,8 +17,9 @@
   <tbody>
   <% @facturas.each do |factura| %>
       <tr>
-        <td><%= factura.emisor %></td>
         <td><%= factura.numero %></td>
+        <td><%= factura.emisor %></td>
+        <td><%=	factura.valor %></td>
         <td><%= factura.id_orden_combustible %></td>
         <td><%= factura.id_orden_respuesto %></td>
         <td><%= factura.id_orden_mantenimiento %></td>

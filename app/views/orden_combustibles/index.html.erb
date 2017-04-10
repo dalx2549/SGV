@@ -11,13 +11,13 @@
   <thead>
   <tr>
     <th>Nro.</th>
-    <th>Estacion de Servicio</th>
-    <th>Vehiculo placa</th>
+    <th>Fecha</th>
+    <th>Vehículo</th>
+    <th>Kilometraje</th>
+    <th>Estación de Servicio</th>
     <th>Tipo de Combustible</th>
-    <th>Valorcompra</th>
-    <th>Persona</th>
-    <th>Cedula</th>
-    <th>Cargo</th>
+    <th>Valor de Compra</th>
+    <th>Encargado</th>
     <th></th>
   </tr>
   </thead>
@@ -27,13 +27,13 @@
       <tr>
 
         <td><%= orden_combustible.id %></td>
-        <td><%= orden_combustible.estacionServicio %></td>
+        <td><%= orden_combustible.fechaEmision %></td>
         <td><%= orden_combustible.vehiculo_placa %></td>
+        <td><%= orden_combustible.kilometraje %></td>
+        <td><%= orden_combustible.estacionServicio %></td>
         <td><%= orden_combustible.tipoCombustible %></td>
         <td><%= orden_combustible.valorCompra %></td>
         <td><%= orden_combustible.persona %></td>
-        <td><%= orden_combustible.cedula %></td>
-        <td><%= orden_combustible.cargo %></td>
         <td>
 
           <div class="btn-group btn-group-sm no-printable" role="group" aria-label="...">

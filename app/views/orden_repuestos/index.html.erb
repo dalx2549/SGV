@@ -11,10 +11,11 @@
   <tr>
     <th>Nro.</th>
     <th>Fecha</th>
-    <th>Encargado</th>
+    <th>Vehículo</th>
+    <th>Kilometraje</th>
     <th>Proveedor</th>
-    <th>Observaciones</th>
-    <th>Vehiculo placa</th>
+    <th>Detalle</th>
+    <th>Encargado</th>
     <th></th>
   </tr>
   </thead>
@@ -24,10 +25,11 @@
       <tr>
         <td><%= orden_repuesto.id %></td>
         <td><%= orden_repuesto.fecha %></td>
-        <td><%= orden_repuesto.encargado %></td>
-        <td><%= orden_repuesto.proveedor %></td>
-        <td><%= orden_repuesto.observaciones %></td>
         <td><%= orden_repuesto.vehiculo_placa %></td>
+        <td><%= orden_repuesto.kilometraje %></td>
+        <td><%= orden_repuesto.proveedor %></td>
+        <td><%=	orden_repuesto.detalle %></td>
+        <td><%= orden_repuesto.encargado %></td>
         <td>
 
           <div class="btn-group btn-group-sm" role="group" aria-label="...">
@@ -55,18 +57,6 @@
 
   $(document).ready(function () {
     $('#tabla-repuestos').DataTable({
-
-      dom: 'Bfrtip',
-      buttons: [{
-
-        extend: 'print',
-        title: 'Órdenes de Repuesto',
-        text: 'Imprimir Historial'
-
-      }
-
-
-      ],
 
       "language": {
         "sProcessing":     "Procesando...",

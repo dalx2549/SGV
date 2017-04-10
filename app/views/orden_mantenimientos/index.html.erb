@@ -10,11 +10,12 @@
   <thead>
   <tr>
     <th>Nro.</th>
-    <th>Vehiculo placa</th>
-    <th>Tipo</th>
+    <th>Fecha</th>
+    <th>Vehiculo</th>
     <th>Kilometraje</th>
+    <th>Tipo</th>
+    <th>Detalle</th>
     <th>Encargado</th>
-    <th>Cédula</th>
     <th></th>
   </tr>
   </thead>
@@ -23,11 +24,12 @@
   <% @orden_mantenimientos.each do |orden_mantenimiento| %>
       <tr>
         <td><%= orden_mantenimiento.id %></td>
+        <td><%= orden_mantenimiento.fecha %></td>
         <td><%= orden_mantenimiento.vehiculo_placa %></td>
-        <td><%= orden_mantenimiento.tipo %></td>
         <td><%= orden_mantenimiento.kilometraje %></td>
-        <td> <%= orden_mantenimiento.encargado %> </td>
-        <td><%= orden_mantenimiento.cedula %></td>
+        <td><%= orden_mantenimiento.tipo %></td>
+        <td><%= orden_mantenimiento.detalle %></td>
+        <td><%= orden_mantenimiento.encargado %> </td>
         <td>
 
           <div class="btn-group btn-group-sm no-printable" role="group" aria-label="...">
@@ -53,19 +55,6 @@
 
   $(document).ready(function () {
     $('#tabla-ordenes-mantenimiento').DataTable({
-
-
-      dom: 'Bfrtip',
-          buttons: [{
-
-            extend: 'print',
-            title: 'Órdenes de Mantenimiento',
-            text: 'Imprimir Historial'
-
-          }
-
-
-    ],
 
 
     "language": {
