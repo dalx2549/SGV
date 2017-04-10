@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410045718) do
+ActiveRecord::Schema.define(version: 20170410052958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20170410045718) do
     t.string   "cargo"
     t.text     "detalle"
     t.date     "fecha"
+    t.string   "proveedor"
   end
 
   create_table "orden_repuestos", force: :cascade do |t|

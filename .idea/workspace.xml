@@ -6,21 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc1cc6d2-8aa4-435d-a1a8-470af524cebe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/fd3e946e-cfb3-47f0-be24-9641177bfe3b.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/fd3e946e-cfb3-47f0-be24-9641177bfe3b.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/facturas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/facturas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/vehiculo.rb" afterPath="$PROJECT_DIR$/app/models/vehiculo.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/facturas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/facturas/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/facturas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/facturas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/facturas/show.html.erb" afterPath="$PROJECT_DIR$/app/views/facturas/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_combustibles/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_combustibles/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_mantenimientos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_mantenimientos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orden_repuestos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orden_repuestos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prestamos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/prestamos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vehiculos/show.html.erb" afterPath="$PROJECT_DIR$/app/views/vehiculos/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="SGV.iws" />
@@ -102,6 +88,32 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Rails SGV: development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="SGV_development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="orden_repuestos" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -159,11 +171,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="development.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
               <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/orden_mantenimientos/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="55" column="19" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="55" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -174,16 +196,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vehiculo.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/vehiculo.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -298,6 +310,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="721" />
@@ -1117,7 +1130,7 @@
       <workItem from="1491626393478" duration="4142000" />
       <workItem from="1491670835807" duration="21766000" />
       <workItem from="1491750911506" duration="3582000" />
-      <workItem from="1491798458635" duration="2564000" />
+      <workItem from="1491798458635" duration="3047000" />
     </task>
     <task id="LOCAL-00001" summary="Modifications to several controllers">
       <created>1487112752005</created>
@@ -1371,11 +1384,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491755397399</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Modify views">
+      <created>1491801343146</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1491801343146</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417915000" />
+    <option name="totallyTimeSpent" value="418398000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1387,7 +1407,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="721" extended-state="6" />
+    <frame x="1" y="23" width="1280" height="721" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2714055" sideWeight="0.4879227" order="0" side_tool="false" content_ui="combo" />
@@ -1473,7 +1493,6 @@
     <MESSAGE value="add Vehiculos history" />
     <MESSAGE value="Add correct behavior to prestamo background worker" />
     <MESSAGE value="Modify Prestamos form, update home page" />
-    <MESSAGE value="Modify views" />
     <MESSAGE value="Add print buttons to orders and prestamos, modify views" />
     <MESSAGE value="New mailers" />
     <MESSAGE value="Modified show views and purge controllers" />
@@ -1490,20 +1509,14 @@
     <MESSAGE value="Add name validations" />
     <MESSAGE value="Modify mailer" />
     <MESSAGE value="Modify validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify validation" />
+    <MESSAGE value="Modify views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1889,6 +1902,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orden_mantenimientos/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="55" column="19" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="55" selection-end-column="19" />
           <folding />
         </state>
       </provider>
