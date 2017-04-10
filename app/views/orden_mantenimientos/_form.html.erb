@@ -26,6 +26,12 @@
 
   <div class="field">
 
+    <%=	 f.text_field :proveedor %>
+
+  </div>
+
+  <div class="field">
+
     <%= f.select :tipo, options_for_select([["Preventivo", "preventivo"], ["Correctivo", "correctivo"]]) %>
   </div>
 
