@@ -40,8 +40,8 @@
 * How to run the app
 
   ```
-  $ redis-server
+  $ redis-server
   $ bundle exec sidekiq
-  $ rails s
+  $ rails server
   ```
 
